@@ -21,11 +21,10 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{nielsen2016}
-\BIBentryALTinterwordspacing
-M.~Nielsen, ``Neural networks and deep learning,'' 2016. [Online]. Available:
-  \url{http://www.neuralnetworksanddeeplearning.com}
-\BIBentrySTDinterwordspacing
+\bibitem{krizhevsky2012}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' in \emph{Advances in neural information
+  processing systems}, 2012, pp. 1097--1105.
 
 \bibitem{goodfellow2016_book}
 \BIBentryALTinterwordspacing
@@ -33,18 +32,45 @@ I.~G.~Y. Bengio and A.~Courville, ``Deep learning,'' 2016, book in preparation
   for MIT Press. [Online]. Available: \url{http://www.deeplearningbook.org}
 \BIBentrySTDinterwordspacing
 
-\bibitem{billovits}
-C.~Billovits, M.~Eric, and N.~Agarwala, ``Hitting depth: Investigating
-  robustness to adversarial examples in deep convolutional neural networks.''
-
 \bibitem{goodfellow2014}
 I.~J. Goodfellow, J.~Shlens, and C.~Szegedy, ``Explaining and harnessing
   adversarial examples,'' \emph{arXiv preprint arXiv:1412.6572}, 2014.
+
+\bibitem{papernot2016transf}
+N.~Papernot, P.~McDaniel, and I.~Goodfellow, ``Transferability in machine
+  learning: from phenomena to black-box attacks using adversarial samples,''
+  \emph{arXiv preprint arXiv:1605.07277}, 2016.
+
+\bibitem{goodfellow2016}
+\BIBentryALTinterwordspacing
+A.~Kurakin, I.~Goodfellow, and S.~Bengio, ``Adversarial examples in the
+  physical world,'' arXiv, Tech. Rep., 2016. [Online]. Available:
+  \url{http://arxiv.org/abs/1607.02533}
+\BIBentrySTDinterwordspacing
 
 \bibitem{szegedy2013}
 C.~Szegedy, W.~Zaremba, I.~Sutskever, J.~Bruna, D.~Erhan, I.~Goodfellow, and
   R.~Fergus, ``Intriguing properties of neural networks,'' \emph{arXiv preprint
   arXiv:1312.6199}, 2013.
+
+\bibitem{lecun1998mnist}
+Y.~LeCun and C.~Cortes, ``The mnist database of handwritten digits,'' 1998.
+
+\bibitem{nielsen2016}
+\BIBentryALTinterwordspacing
+M.~Nielsen, ``Neural networks and deep learning,'' 2016. [Online]. Available:
+  \url{http://www.neuralnetworksanddeeplearning.com}
+\BIBentrySTDinterwordspacing
+
+\bibitem{zeiler2014visualizing}
+M.~D. Zeiler and R.~Fergus, ``Visualizing and understanding convolutional
+  networks,'' in \emph{European Conference on Computer Vision}.\hskip 1em plus
+  0.5em minus 0.4em\relax Springer, 2014, pp. 818--833.
+
+\bibitem{hinton2012improving}
+G.~E. Hinton, N.~Srivastava, A.~Krizhevsky, I.~Sutskever, and R.~R.
+  Salakhutdinov, ``Improving neural networks by preventing co-adaptation of
+  feature detectors,'' \emph{arXiv preprint arXiv:1207.0580}, 2012.
 
 \bibitem{gu2014}
 S.~Gu and L.~Rigazio, ``Towards deep neural network architectures robust to
@@ -56,22 +82,50 @@ A.~Nguyen, J.~Yosinski, and J.~Clune, ``Deep neural networks are easily fooled:
   Conference on Computer Vision and Pattern Recognition (CVPR)}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2015, pp. 427--436.
 
-\bibitem{krizhevsky2012}
-A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
-  deep convolutional neural networks,'' in \emph{Advances in neural information
-  processing systems}, 2012, pp. 1097--1105.
-
-\bibitem{goodfellow2016}
-\BIBentryALTinterwordspacing
-A.~Kurakin, I.~Goodfellow, and S.~Bengio, ``Adversarial examples in the
-  physical world,'' arXiv, Tech. Rep., 2016. [Online]. Available:
-  \url{http://arxiv.org/abs/1607.02533}
-\BIBentrySTDinterwordspacing
-
 \bibitem{dalvi2004}
 N.~Dalvi, P.~Domingos, S.~Sanghai, D.~Verma \emph{et~al.}, ``Adversarial
   classification,'' in \emph{Proceedings of the tenth ACM SIGKDD international
   conference on Knowledge discovery and data mining}.\hskip 1em plus 0.5em
   minus 0.4em\relax ACM, 2004, pp. 99--108.
+
+\bibitem{lowd2005}
+D.~Lowd and C.~Meek, ``Adversarial learning,'' in \emph{Proceedings of the
+  eleventh ACM SIGKDD international conference on Knowledge discovery in data
+  mining}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2005, pp. 641--647.
+
+\bibitem{billovits}
+C.~Billovits, M.~Eric, and N.~Agarwala, ``Hitting depth: Investigating
+  robustness to adversarial examples in deep convolutional neural networks.''
+
+\bibitem{lecun1998gradient}
+Y.~LeCun, L.~Bottou, Y.~Bengio, and P.~Haffner, ``Gradient-based learning
+  applied to document recognition,'' \emph{Proceedings of the IEEE}, vol.~86,
+  no.~11, pp. 2278--2324, 1998.
+
+\bibitem{floreano2008bio}
+D.~Floreano and C.~Mattiussi, \emph{Bio-inspired artificial intelligence:
+  theories, methods, and technologies}.\hskip 1em plus 0.5em minus 0.4em\relax
+  MIT press, 2008.
+
+\bibitem{jia2014caffe}
+Y.~Jia, E.~Shelhamer, J.~Donahue, S.~Karayev, J.~Long, R.~Girshick,
+  S.~Guadarrama, and T.~Darrell, ``Caffe: Convolutional architecture for fast
+  feature embedding,'' in \emph{Proceedings of the 22nd ACM international
+  conference on Multimedia}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2014,
+  pp. 675--678.
+
+\bibitem{stanley2007compositional}
+K.~O. Stanley, ``Compositional pattern producing networks: A novel abstraction
+  of development,'' \emph{Genetic programming and evolvable machines}, vol.~8,
+  no.~2, pp. 131--162, 2007.
+
+\bibitem{papernot2016}
+N.~Papernot, P.~McDaniel, I.~Goodfellow, S.~Jha, Z.~Berkay~Celik, and A.~Swami,
+  ``Practical black-box attacks against deep learning systems using adversarial
+  examples,'' \emph{arXiv preprint arXiv:1602.02697}, 2016.
+
+\bibitem{simonyan2014very}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' \emph{arXiv preprint arXiv:1409.1556}, 2014.
 
 \end{thebibliography}

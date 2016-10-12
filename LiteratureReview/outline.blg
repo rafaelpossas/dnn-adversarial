@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: outline.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ref.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in billovits
+Warning--empty year in billovits
+
+Done.
+You've used 5 entries,
+            4087 wiz_defined-function locations,
+            845 strings with 8293 characters,
+and the built_in function-call counts, 2775 in all, are:
+= -- 192
+> -- 85
+< -- 9
++ -- 42
+- -- 18
+* -- 144
+:= -- 443
+add.period$ -- 11
+call.type$ -- 5
+change.case$ -- 5
+chr.to.int$ -- 24
+cite$ -- 7
+duplicate$ -- 217
+empty$ -- 241
+format.name$ -- 23
+if$ -- 615
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 41
+newline$ -- 38
+num.names$ -- 5
+pop$ -- 119
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 196
+stack$ -- 0
+substring$ -- 61
+swap$ -- 137
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 5
+warning$ -- 2
+while$ -- 9
+width$ -- 6
+write$ -- 61
+(There were 2 warnings)
