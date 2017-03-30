@@ -1,9 +1,7 @@
 from __future__ import print_function
-import keras
-
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten, BatchNormalization
+from keras.layers import Dense, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras.optimizers import Adadelta
 from keras.callbacks import EarlyStopping
@@ -18,14 +16,14 @@ class VGG(object):
         # The CIFAR10 images are RGB.
         self.img_channels = img_channels
 
-
-    def model(self,  num_classes=10):
+    def model(self,  num_classes=10,):
 
         model = Sequential()
 
         # Block 1
         model.add(
-            Conv2D(64, (3, 3), activation='relu', padding='same', name='block1_conv1', input_shape=x_train.shape[1:]))
+            Conv2D(64, (3, 3), activation='relu', padding='same', name='block1_conv1',
+                   input_shape=(self.img_rows, self.img_cols, self.img_channels)))
         model.add(Conv2D(64, (3, 3), activation='relu', padding='same', name='block1_conv2'))
         model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block1_pool'))
 

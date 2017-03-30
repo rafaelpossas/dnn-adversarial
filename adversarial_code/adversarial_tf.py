@@ -1,19 +1,6 @@
-from keras.models import load_model
-import matplotlib.pyplot as plt
-from utils import *
 from keras import backend as K
 from keras import metrics
-from keras.applications.inception_v3 import InceptionV3,preprocess_input, decode_predictions
-from keras.applications.vgg16 import VGG16
 import tensorflow as tf
-import urllib
-import cv2
-from keras.preprocessing import image
-from keras.models import load_model
-from PIL import Image
-import numpy as np
-import tensorflow as tf
-from keras.backend import categorical_crossentropy
 from keras.utils.np_utils import to_categorical
 
 
