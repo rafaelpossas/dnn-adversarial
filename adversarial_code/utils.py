@@ -25,6 +25,9 @@ class Utils(object):
         print(x_train.shape[0], 'train samples')
         print(x_test.shape[0], 'test samples')
 
+        x_train = x_train.astype("float") / 255.0
+        x_test = x_test.astype("float") / 255.0
+
         # Convert class vectors to binary class matrices.
         y_train = keras.utils.to_categorical(y_train, 10)
         y_test = keras.utils.to_categorical(y_test, 10)

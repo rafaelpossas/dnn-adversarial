@@ -35,12 +35,12 @@ class Adversarial(object):
 
     def _fgsm_k(self, model, fake_class_idx, epsilon, img, descent=False):
         fake_class_idx = fake_class_idx
-        fake_target = to_categorical(fake_class_idx, 1000)
+        fake_target = to_categorical(fake_class_idx, model.layers[-1].output_shape[1])
         fake_target_variable = K.variable(fake_target)
         loss = metrics.categorical_crossentropy(model.output, fake_target_variable)
         gradients = K.gradients(loss, model.input)
-        get_grad_values = K.function([model.input], gradients)
-        grad_values = get_grad_values([img])[0]
+        get_grad_values = K.function([model.input, K.learning_phase()], gradients)
+        grad_values = get_grad_values([img, 0])[0]
         grad_signs = grad_values.copy()
         grad_signs[grad_values < 0] = -1
         grad_signs[grad_values >= 0] = 1
@@ -92,7 +92,7 @@ class Adversarial(object):
         perturbation = None
         for ix in range(n_steps):
             if perturbation is not None:
-                img = img + perturbation if descent == False else img - perturbation
+                img = img + perturbation if descent is False else img - perturbation
             adv, perturbation = self._fgsm_k(model=model, fake_class_idx=fake_class_idx, epsilon=epsilon, img=img)
 
         perturbation = adv - img if descent is False else img - adv

@@ -2,9 +2,9 @@ from __future__ import print_function
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers import Dense, Flatten
-from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Conv2D, MaxPooling2D, Dropout, Activation
 from keras.optimizers import Adadelta
-from keras.callbacks import EarlyStopping
+from keras.callbacks import EarlyStopping, ModelCheckpoint
 
 
 class VGG(object):
@@ -16,7 +16,7 @@ class VGG(object):
         # The CIFAR10 images are RGB.
         self.img_channels = img_channels
 
-    def model(self,  num_classes=10,):
+    def model(self,  num_classes=10, dropout=False):
 
         model = Sequential()
 
@@ -28,39 +28,34 @@ class VGG(object):
         model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block1_pool'))
 
         # Block 2
-        model.add(Conv2D(128, (3, 3), activation='relu', padding='same', name='block2_conv1'))
-        model.add(Conv2D(128, (3, 3), activation='relu', padding='same', name='block2_conv2'))
+        model.add(Conv2D(32, (3, 3), padding='same', name='block2_conv1'))
+        model.add(Conv2D(32, (3, 3), padding='same', name='block2_conv2'))
+        model.add(Activation("relu"))
         model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block2_pool'))
 
+        if dropout:
+            model.add(Dropout(0.25))
+
         # Block 3
-        model.add(Conv2D(256, (3, 3), activation='relu', padding='same', name='block3_conv1'))
-        model.add(Conv2D(256, (3, 3), activation='relu', padding='same', name='block3_conv2'))
-        model.add(Conv2D(256, (3, 3), activation='relu', padding='same', name='block3_conv3'))
+        model.add(Conv2D(64, (3, 3), padding='same', name='block3_conv1'))
+        model.add(Conv2D(64, (3, 3), padding='same', name='block3_conv2'))
+        model.add(Activation("relu"))
         model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block3_pool'))
 
-        # Block 4
-        model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block4_conv1'))
-        model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block4_conv2'))
-        model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block4_conv3'))
-        model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block4_pool'))
-
-        # Block 5
-        model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block5_conv1'))
-        model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block5_conv2'))
-        model.add(Conv2D(512, (3, 3), activation='relu', padding='same', name='block5_conv3'))
-        model.add(MaxPooling2D((2, 2), strides=(2, 2), name='block5_pool'))
+        if dropout:
+            model.add(Dropout(0.25))
 
         # Classification block
         model.add(Flatten(name='flatten'))
-        model.add(Dense(4096, activation='relu', name='fc1'))
-        model.add(Dense(4096, activation='relu', name='fc2'))
+        model.add(Dense(512, name='fc1'))
+        model.add(Activation("relu"))
+
+        if dropout:
+            model.add(Dropout(0.5))
+
         model.add(Dense(num_classes, activation='softmax', name='predictions'))
 
-        adadelta = Adadelta(lr=1, rho=0.9, decay=0.00001)
-        # Let's train the model using RMSprop
-        model.compile(loss='categorical_crossentropy',
-                      optimizer=adadelta,
-                      metrics=['accuracy'])
+
         return model
 
     def fit(self, model, x_train, y_train, x_test, y_test,
@@ -69,18 +64,20 @@ class VGG(object):
 
         x_train = x_train.astype('float32')
         x_test = x_test.astype('float32')
-        x_train /= 255
-        x_test /= 255
+        x_train /= 255.0
+        x_test /= 255.0
 
         early_stopping = EarlyStopping(monitor='val_loss', min_delta=early_stopping_delta,
                                        patience=early_stopping_patience)
+        checkpointer = ModelCheckpoint(filepath="model_vgg_chk.hdf5", verbose=0, save_best_only=True, save_weights_only=True)
+
         if not data_augmentation:
             print('Not using data augmentation.')
-            # model.fit(x_train, y_train,
-            #           batch_size=batch_size,
-            #           epochs=epochs,
-            #           validation_data=(x_test, y_test),
-            #           shuffle=True)
+            model.fit(x_train, y_train,
+                      batch_size=batch_size,
+                      epochs=nb_epochs,
+                      validation_split=0.2,
+                      callbacks=[early_stopping, checkpointer])
         else:
             print('Using real-time data augmentation.')
             # This will do preprocessing and realtime data augmentation:
@@ -106,9 +103,7 @@ class VGG(object):
                                 steps_per_epoch=x_train.shape[0] // batch_size,
                                 epochs=nb_epochs,
                                 validation_data=(x_test, y_test),
-                                callbacks=[early_stopping])
-            model.save_weights("../model_vgg.hdf5")
-
+                                callbacks=[early_stopping, checkpointer])
 
 
 
