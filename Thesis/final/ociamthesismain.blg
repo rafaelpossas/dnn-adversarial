@@ -4,8 +4,18 @@ A level-1 auxiliary file: acknowlegements.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: conclusions.aux
 A level-1 auxiliary file: appendix1.aux
 A level-1 auxiliary file: appendix2.aux
 The style file: plain.bst
 Database file #1: refs.bib
+Warning--entry type for "papernot_thesis_2016" isn't style-file defined
+--line 85 of file refs.bib
+Warning--empty journal in billovits
+Warning--empty year in billovits
+Warning--empty note in stanford2016
+Warning--empty note in nielsen2016
+Warning--empty booktitle in papernot_2017
+(There were 6 warnings)
