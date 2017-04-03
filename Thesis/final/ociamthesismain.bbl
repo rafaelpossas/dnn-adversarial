@@ -1,0 +1,60 @@
+\begin{thebibliography}{10}
+
+\bibitem{bishop1995neural}
+Christopher~M Bishop.
+\newblock {\em Neural networks for pattern recognition}.
+\newblock Oxford university press, 1995.
+
+\bibitem{goller1996learning}
+Christoph Goller and Andreas Kuchler.
+\newblock Learning task-dependent distributed representations by
+  backpropagation through structure.
+\newblock In {\em Neural Networks, 1996., IEEE International Conference on},
+  volume~1, pages 347--352. IEEE, 1996.
+
+\bibitem{goodfellow2014}
+Ian~J Goodfellow, Jonathon Shlens, and Christian Szegedy.
+\newblock Explaining and harnessing adversarial examples.
+\newblock {\em arXiv preprint arXiv:1412.6572}, 2014.
+
+\bibitem{hornik1989multilayer}
+Kurt Hornik, Maxwell Stinchcombe, and Halbert White.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock {\em Neural networks}, 2(5):359--366, 1989.
+
+\bibitem{krizhevsky2012}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
+\bibitem{goodfellow2016}
+Alexey Kurakin, Ian Goodfellow, and Samy Bengio.
+\newblock Adversarial examples in the physical world.
+\newblock Technical report, arXiv, 2016.
+
+\bibitem{lecunn89}
+Yann Lecun, B.~Boser, {J. S.} Denker, D.~Henderson, {R. E.} Howard, W.~Hubbard,
+  and L.D. Jackel.
+\newblock Backpropagation applied to handwritten zip code recognition.
+\newblock {\em Neural computation}, 1(4):541--551, 1989.
+
+\bibitem{matsugu2003subject}
+Masakazu Matsugu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda.
+\newblock Subject independent facial expression recognition with robust face
+  detection using a convolutional neural network.
+\newblock {\em Neural Networks}, 16(5):555--559, 2003.
+
+\bibitem{papernot2016transf}
+Nicolas Papernot, Patrick McDaniel, and Ian Goodfellow.
+\newblock Transferability in machine learning: from phenomena to black-box
+  attacks using adversarial samples.
+\newblock {\em arXiv preprint arXiv:1605.07277}, 2016.
+
+\bibitem{szegedy2013}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus.
+\newblock Intriguing properties of neural networks.
+\newblock {\em arXiv preprint arXiv:1312.6199}, 2013.
+
+\end{thebibliography}

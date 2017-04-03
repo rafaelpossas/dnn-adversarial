@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Definitions}{2}
+\contentsline {section}{\numberline {1.2}Motivation}{2}
+\contentsline {section}{\numberline {1.3}Thesis Goal}{3}
+\contentsline {section}{\numberline {1.4}Contributions}{3}
+\contentsline {section}{\numberline {1.5}Thesis Structure}{3}
+\contentsline {chapter}{\numberline {2}Background}{4}
+\contentsline {section}{\numberline {2.1} (Shallow) Neural Networks}{4}
+\contentsline {section}{\numberline {2.2}Gradient Methods and Backpropagation}{5}
+\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{7}
+\contentsline {subsection}{\numberline {2.3.1}Deep Neural Networks Properties}{8}
+\contentsline {chapter}{\numberline {3}Adversarial Examples}{10}
+\contentsline {section}{\numberline {3.1}Neural Networks}{10}
+\contentsline {section}{\numberline {3.2}Gradient Methods and Backpropagation}{10}
+\contentsline {section}{\numberline {3.3}Deep Neural Networks}{13}
+\contentsline {section}{\numberline {3.4}Convolutional Neural Networks}{13}
+\contentsline {subsection}{\numberline {3.4.1}Deep Neural Networks Properties}{14}
+\contentsline {chapter}{\numberline {4}Sample Title}{16}
+\contentsline {chapter}{\numberline {A}Sample Title}{17}
+\contentsline {chapter}{\numberline {B}Sample Title}{18}
+\contentsline {chapter}{Bibliography}{19}
