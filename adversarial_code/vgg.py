@@ -15,6 +15,7 @@ from keras.layers import Flatten
 from keras.layers import Dense
 from keras.layers import Conv2D
 from keras.layers import MaxPooling2D
+from keras.layers import Dropout
 from keras.engine.topology import get_source_inputs
 from keras.utils.layer_utils import convert_all_kernels_in_model
 from keras.utils.data_utils import get_file
@@ -159,6 +160,17 @@ def VGG16(include_top=True, weights='imagenet',
                                         TF_WEIGHTS_PATH_NO_TOP,
                                         cache_subdir='models')
             model.load_weights(weights_path)
+            # Extract the last layer from third block of vgg16 model
+            last = model.get_layer('block3_pool').output
+            # Add classification layers on top of it
+            x = Flatten()(last)
+            x = Dense(256, activation='relu')(x)
+            x = Dropout(0.5)(x)
+            pred = Dense(10, activation='sigmoid')(x)
+            model = Model(model.input, pred)
+
             if K.backend() == 'theano':
                 convert_all_kernels_in_model(model)
+
+
     return model

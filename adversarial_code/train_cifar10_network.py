@@ -12,7 +12,7 @@ from adversarial_code.vgg import VGG16
 # tf.python.control_flow_ops = tf
 
 img_width, img_height = 32, 32
-base_model = VGG16(weights='imagenet', include_top=False, input_shape=(32, 32, 3))
+model = VGG16(weights='imagenet', include_top=False, input_shape=(32, 32, 3))
 
 nb_epoch = 50
 nb_classes = 10
@@ -24,15 +24,7 @@ Y_test = np_utils.to_categorical(y_test, nb_classes)
 nb_train_samples = X_train.shape[0]
 nb_validation_samples = X_test.shape[0]
 
-# Extract the last layer from third block of vgg16 model
-last = base_model.get_layer('block3_pool').output
-# Add classification layers on top of it
-x = Flatten()(last)
-x = Dense(256, activation='relu')(x)
-x = Dropout(0.5)(x)
-pred = Dense(10, activation='sigmoid')(x)
 
-model = Model(base_model.input, pred)
 
 # set the base model's layers to non-trainable
 # uncomment next two lines if you don't want to
