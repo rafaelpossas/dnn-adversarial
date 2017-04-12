@@ -18,15 +18,16 @@ class Utils(object):
                     values_to_remove -= 1
         return indexes
 
-    def load_cifar10(self):
+    def load_cifar10(self, normalize=True):
         # The data, shuffled and split between train and test sets:
         (x_train, y_train), (x_test, y_test) = cifar10.load_data()
         print('x_train shape:', x_train.shape)
         print(x_train.shape[0], 'train samples')
         print(x_test.shape[0], 'test samples')
 
-        x_train = x_train.astype("float") / 255.0
-        x_test = x_test.astype("float") / 255.0
+        if normalize:
+            x_train = x_train.astype("float") / 255.0
+            x_test = x_test.astype("float") / 255.0
 
         # Convert class vectors to binary class matrices.
         y_train = keras.utils.to_categorical(y_train, 10)
