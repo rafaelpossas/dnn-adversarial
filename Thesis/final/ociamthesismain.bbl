@@ -112,6 +112,13 @@ Nicolas Papernot, Patrick McDaniel, and Ian Goodfellow.
   attacks using adversarial samples.
 \newblock {\em arXiv preprint arXiv:1605.07277}, 2016.
 
+\bibitem{papernot2016}
+Nicolas Papernot, Patrick McDaniel, Ian Goodfellow, Somesh Jha, Z~Berkay~Celik,
+  and Ananthram Swami.
+\newblock Practical black-box attacks against deep learning systems using
+  adversarial examples.
+\newblock {\em arXiv preprint arXiv:1602.02697}, 2016.
+
 \bibitem{szegedy2013}
 Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
   Ian Goodfellow, and Rob Fergus.

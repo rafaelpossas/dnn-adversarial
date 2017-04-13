@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: ociamthesismain.aux
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ociamthesismain.aux
 A level-1 auxiliary file: dedication.aux
 A level-1 auxiliary file: acknowlegements.aux
 A level-1 auxiliary file: abstract.aux
@@ -6,6 +8,9 @@ A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
 A level-1 auxiliary file: chapter3.aux
 A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
+A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: conclusions.aux
 A level-1 auxiliary file: appendix1.aux
 A level-1 auxiliary file: appendix2.aux
@@ -18,4 +23,45 @@ Warning--empty year in billovits
 Warning--empty note in stanford2016
 Warning--empty note in nielsen2016
 Warning--empty booktitle in papernot_2017
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            612 strings with 7715 characters,
+and the built_in function-call counts, 7274 in all, are:
+= -- 693
+> -- 416
+< -- 5
++ -- 165
+- -- 142
+* -- 482
+:= -- 1244
+add.period$ -- 65
+call.type$ -- 22
+change.case$ -- 137
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 264
+empty$ -- 511
+format.name$ -- 142
+if$ -- 1492
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 17
+newline$ -- 110
+num.names$ -- 44
+pop$ -- 157
+preamble$ -- 1
+purify$ -- 115
+quote$ -- 0
+skip$ -- 204
+stack$ -- 0
+substring$ -- 330
+swap$ -- 62
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 86
+warning$ -- 5
+while$ -- 62
+width$ -- 24
+write$ -- 223
 (There were 6 warnings)

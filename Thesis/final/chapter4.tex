@@ -9,7 +9,7 @@ Papernot (2015) presented that many adversarial examples crafted to fool one spe
 
 The machine learning transferability property constitutes a threat vector for many state of the art methods, thus, one should be able to quantify most vulnerable classes of models by generating accurate comparison of the attack surface of each class. Attacks can be mainly split into both Intra-Technique and Cross-Technique transferability. These are discussed in more details on the following sections.
 
-\subsubsection{Intra-technique transferability}\label{subsubsec:intra}
+\section{Intra-technique transferability}
 
 The Intra-technique transferability is done by reproducing the learning process between two identical algorithms \cite{papernot2016transf}. Even though, the algorithms can differ in terms of architecture, they are still based on the same fundamental learning concept. For example, algorithms could be categorized into three different classes: differentiable algorithms like DNN and Logistic regressions, lazy learners like KNN and non-differentiable models like SVM and Decision Trees. Therefore, this technique consists of keeping the same learning method while differing the hyperparameters/architecture and using queried subset of the training data to train the local model. 
 
@@ -25,7 +25,7 @@ In order to make a comparison between these techniques, Papernot N. et. al (2015
 \end{figure}
 
 
-\subsubsection{Cross-technique transferability}
+\section{Cross-technique transferability}
 Cross-Technique transferability was referred as the knowledge transfer between two different machine learning techniques. This problem has a higher degree of difficulty than the method shown on section \ref{subsubsec:intra} as it involves models using possibly very different techniques like DNNs and Decision trees. Yet, this can be seen as quite strong phenomenon to which techniques like Logistic Regression, Support Vector Machines and Decision Trees along with Ensemble based models are extremely vulnerable \cite{papernot2016transf}.
 
 Papernot N. et. al \cite{papernot2016transf} have shown a strong but heterogeneous phenomenon. While DNN's ended up as being the most robust of the methods with misclassification rates varying between 0.82\% and 38.27\%, Decision Trees were the most vulnerable with rates from 47.20\% to 89.29\%. Interesting enough, ensemble methods -- focused on measuring the output of all the "experts" in the group -- have shown quite vulnerable to the experiment. The hypothesis is that the technique explores the individual vulnerability within each of the ensemble methods.
