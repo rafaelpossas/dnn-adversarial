@@ -6,7 +6,7 @@ from keras.engine import Model
 from keras.layers import Dropout, Flatten, Dense
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import np_utils
-
+import numpy as np
 from adversarial_code.vgg import VGG16
 
 # tf.python.control_flow_ops = tf
@@ -39,6 +39,23 @@ model.compile(loss='binary_crossentropy',
               metrics=['accuracy'])
 
 model.summary()
+
+number_of_values_to_remove = 2500
+class_number = 6
+numbers = [x.argmax() for x in Y_train]
+print(np.unique(numbers, return_counts=True))
+
+indexes = []
+
+for ix in range(len(numbers)):
+    if number_of_values_to_remove > 0:
+        if numbers[ix] == class_number:
+            indexes.append(ix)
+            number_of_values_to_remove = number_of_values_to_remove - 1
+
+X_train = np.reshape([img for ix, img in enumerate(X_train) if ix not in indexes], (47500, 32, 32, 3))
+Y_train = np.reshape([lbl for ix, lbl in enumerate(Y_train) if ix not in indexes], (47500, 10))
+
 # prepare data augmentation configuration
 train_datagen = ImageDataGenerator(
     rescale=1. / 255,
@@ -65,7 +82,7 @@ model.fit_generator(
     callbacks=[tb])
 
 # save the model
-model.save('cifar10-vgg16_model_alllayers.h5')
+model.save('cifar10-vgg16_model_alllayers_unbalanced.h5')
 
 # from adversarial_code.cifar_keras_vgg import VGG
 # from adversarial_code.utils import Utils
