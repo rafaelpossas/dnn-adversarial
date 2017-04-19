@@ -4,16 +4,20 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Output change with regards to layer(s) weight change \cite {nielsen2016}}}{5}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Gradient calculation representation \cite {nielsen2016}}}{6}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Shallow Neural Network vs Convolutional Neural Network}}{8}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces CNN layer visualization}}{9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces (Left) Accuracy of Different CNN models (Right) Inference time for different batch sizes}}{10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensional Representation of unexplored adversarial regions \cite {papernot_2017}}}{12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Adversarial example crafting with fast gradient sign \cite {goodfellow2014}.}}{13}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Examples of noisy images classified with high confidence \cite {nguyen2015}.}}{13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensional Representation of unexplored adversarial regions \cite {papernot_2017}}}{14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Adversarial example crafting with fast gradient sign \cite {goodfellow2014}.}}{15}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Iterative FGSM Method \cite {goodfellow2016}.}}{15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Visual Comparison of Gradients-based Methods \cite {goodfellow2016}.}}{16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Knowledge transfer level using Intra-Technique Transferability \cite {papernot2016transf}}}{16}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Knowledge transfer using Cross-Technique Transferability and Ensemble Methods \cite {papernot2016transf}}}{17}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Black-Box attacks results against real world systems}}{18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Knowledge transfer level using Intra-Technique Transferability \cite {papernot2016transf}}}{18}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Knowledge transfer using Cross-Technique Transferability and Ensemble Methods \cite {papernot2016transf}}}{19}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Examples of noisy images classified with high confidence \cite {nguyen2015}.}}{21}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces VGG16 on ImageNet}}{25}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Results on the full dataset}}{28}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

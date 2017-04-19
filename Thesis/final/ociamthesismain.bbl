@@ -5,6 +5,11 @@ Ian Goodfellow~Yoshua Bengio and Aaron Courville.
 \newblock Deep learning.
 \newblock Book in preparation for MIT Press, 2016.
 
+\bibitem{bengiormsprop}
+Yoshua Bengio.
+\newblock Rmsprop and equilibrated adaptive learning rates for non-convex
+  optimization.
+
 \bibitem{billovits}
 Chris Billovits, Mihail Eric, and Nipun Agarwala.
 \newblock Hitting depth: Investigating robustness to adversarial examples in
@@ -14,6 +19,17 @@ Chris Billovits, Mihail Eric, and Nipun Agarwala.
 Christopher~M Bishop.
 \newblock {\em Neural networks for pattern recognition}.
 \newblock Oxford university press, 1995.
+
+\bibitem{canziani2016analysis}
+Alfredo Canziani, Adam Paszke, and Eugenio Culurciello.
+\newblock An analysis of deep neural network models for practical applications.
+\newblock {\em arXiv preprint arXiv:1605.07678}, 2016.
+
+\bibitem{deng2009imagenet}
+Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li~Fei-Fei.
+\newblock Imagenet: A large-scale hierarchical image database.
+\newblock In {\em Computer Vision and Pattern Recognition, 2009. CVPR 2009.
+  IEEE Conference on}, pages 248--255. IEEE, 2009.
 
 \bibitem{goller1996learning}
 Christoph Goller and Andreas Kuchler.
@@ -57,6 +73,11 @@ Andrej Karpathy.
 \newblock Convolutional neural networks for visual recognition.
 \newblock 2016.
 
+\bibitem{krizhevsky_2009}
+Alex Krizhevsky.
+\newblock Cifar-10 and cifar-100 datasets.
+\newblock 2009.
+
 \bibitem{krizhevsky2012}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
@@ -83,6 +104,11 @@ Masakazu Matsugu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda.
 \newblock Subject independent facial expression recognition with robust face
   detection using a convolutional neural network.
 \newblock {\em Neural Networks}, 16(5):555--559, 2003.
+
+\bibitem{murphey2004}
+Guo~Hong Murphey, YI~L.
+\newblock Neural learning from unbalanced data.
+\newblock 2004.
 
 \bibitem{nguyen2015}
 Anh Nguyen, Jason Yosinski, and Jeff Clune.
@@ -119,10 +145,27 @@ Nicolas Papernot, Patrick McDaniel, Ian Goodfellow, Somesh Jha, Z~Berkay~Celik,
   adversarial examples.
 \newblock {\em arXiv preprint arXiv:1602.02697}, 2016.
 
+\bibitem{simonyan2014very}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em arXiv preprint arXiv:1409.1556}, 2014.
+
 \bibitem{szegedy2013}
 Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
   Ian Goodfellow, and Rob Fergus.
 \newblock Intriguing properties of neural networks.
 \newblock {\em arXiv preprint arXiv:1312.6199}, 2013.
+
+\bibitem{yosinski2014transferable}
+Jason Yosinski, Jeff Clune, Yoshua Bengio, and Hod Lipson.
+\newblock How transferable are features in deep neural networks?
+\newblock In {\em Advances in neural information processing systems}, pages
+  3320--3328, 2014.
+
+\bibitem{zeiler2014visualizing}
+Matthew~D Zeiler and Rob Fergus.
+\newblock Visualizing and understanding convolutional networks.
+\newblock In {\em European conference on computer vision}, pages 818--833.
+  Springer, 2014.
 
 \end{thebibliography}

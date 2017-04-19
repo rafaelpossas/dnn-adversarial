@@ -7,7 +7,30 @@ In this chapter, we present approaches for attacking machine learning algorithms
 
 Papernot (2015) presented that many adversarial examples crafted to fool one specific model are also likely to affect another different model. As long as the models were trained to perform the same task, knowledge can be transferred when querying the victim model, namely oracle, to label a synthetic training set for the substitute.
 
-The machine learning transferability property constitutes a threat vector for many state of the art methods, thus, one should be able to quantify most vulnerable classes of models by generating accurate comparison of the attack surface of each class. Attacks can be mainly split into both Intra-Technique and Cross-Technique transferability. These are discussed in more details on the following sections.
+The machine learning transferability property constitutes a threat vector for many state of the art methods, thus, one should be able to quantify most vulnerable classes of models by generating accurate comparison of the attack surface of each class. Attacks can, however, depend on some specific information of the target as shown in Table ~\ref{tbl:attack_info}. Techniques can mainly be split into both Intra-Technique and Cross-Technique. These are discussed in more details on the following sections.
+
+\vskip 1cm
+
+\begin {table}
+\begin{tabular}{|c|c|}
+	\hline 
+	Model Parameters (Weights and Biases) & Have full access to model wieghts \\ 
+	\hline 
+	Model Architecture / Type & Know what the model looks like \\ 
+	\hline 
+	Training data & Understand the data domain \\ 
+	\hline 
+	Oracle/Black box & Query model with input X, get label Y \\ 
+	\hline 
+	
+\end{tabular} 
+\caption {How Much Information is needed to fool a model?}
+\label{tbl:attack_info}
+\end {table}
+
+\medskip
+
+
 
 \section{Intra-technique transferability}
 
@@ -43,12 +66,34 @@ Training the substitute model that approximates the Oracle poses some challenges
 
 Experiments from Papernot et al. (2016) were performed against real-world remote systems in order to validate the effectiveness of such attacks. The results have shown that systems using DNNs are usually more robust and require more queries to have the substitute being able to generate samples that are misclassified by the oracle.
 
-\begin{figure}[!h]
+\begin{table}[!h]
 \centering
 	\includegraphics[scale=0.7]{black_box.png}
 \caption{Black-Box attacks results against real world systems}
-\label{fig:blac_box}
+\label{tbl:black_box}
+\end{table}
+
+\section{Unrecognizable Images}\label{subsec:unrec}
+
+Adversaries, on the other hand, are not only comprised of small perturbations on known images. Nguyen et al (2015) presented a method for producing images that are unrecognizable to humans, but are nonetheless labeled as recognizable objects by DNNs \cite{nguyen2015}. For instance, a DNN would classify a noise-filled image crafted using their technique with high confidence. These images were named $fooling images$ since they do not have a source class but are crafted solely to perform a targeted misclassification attack.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=1.]{unrec_images.png}
+	\caption{Examples of noisy images classified with high confidence \cite{nguyen2015}.}
+	\label{fig:unrec_images}
 \end{figure}
+
+
+\section{Adversarials in the Physical World}\label{sec:physical}
+
+All the aforementioned techniques were based into feeding information directly into machine learning systems. Such model only takes into consideration situations in which attacks take place entirely within the computer. For instance, these techniques could be used by attackers to avoid spam filters or malware detectors. Even though the study is utterly relevant, a recent study conducted by \cite{goodfellow2016} have shown that it is possible to craft adversarial samples in order to perform attacks on machine learning systems which are operating in the physical world.
+
+Although the Fast Gradient Sign method have been successful on crafting adversarial examples, there are some extensions of the method that can be used in order to create perturbations that are more likely to work in the physical world. Firstly, \cite{goodfellow2016} introduced a variation named \textit{Basic Iterative Method}. This technique consists of applying the fast method multiple times with small step sizes and making sure that all pixels are within a $\epsilon$-neighbourhood of the original image. The number of iterations was chosen heuristically with goals of being sufficient enough to have the adversarial example reaching the edge of the $\epsilon$ max-norm.
+
+In order to perform experiments, clean photos of adversarial examples created using the three methods were taken and fed into a machine learning system using Deep Convolutional Neural Networks (Inception V3). Adversarial Images created using the "fast" method were more robust when compared to the iterative methods. The hypothesis behind the result is that iterative methods create more subtle perturbations that can be easily be destroyed by the photo transformation process (Photo Printing as described above). Overall, it could be expected that about 2/3 of the images would be top-1 misclassified and about 1/3 top-5 misclassified by the fast method using an $\epsilon$ of 16.
+
+Adversarial examples is not only feasible on digital attacks but also on physical world scenarios. By using the correct perturbation algorithm with optimized hyperparameters one can use printed digital photos to fool day-to-day machine learning systems. As more and more machine learning is becoming part of our environment, techniques for avoiding such attacks need to be developed so these systems can become less vulnerable to any kind of attack.
 
 \section{Defending Against Adversarial Attacks}\label{sec:robustness}
 

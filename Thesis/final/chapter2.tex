@@ -62,6 +62,32 @@ The main architectural difference of ConvNets is that they have added some diffe
 \end{figure}
 
 Convolutional Neural Networks are considered the state of the art solution for computer vision problems. The archutecture developed by Krizhevsk et al. (2012) achieved an averaged top-1 and top-5 test set error rates of 37.5\% and 17\% where the previously record was 45.7\% and 25.7\% by a different technique. The network was comprised of eight layers, 5 of which were convolutional layers and the remaining were three fully connected layers. The output of the three last layers was fed to a 1000-way softmax to produce 1000 different image classes labels of the ImageNet dataset. Besides, max-pooling layers were also used following the fifth convolutional layer and response-normalization layers. Adding or removing any layers on this architecture yielded worst results. Overfitting was treated by using both Data Augmentation and Dropout \cite{hinton2012improving} techniques since the architecture had over 60 million parameters. These results show that deep convolutional networks are capable of achieving above the average results even when challenging datasets with several classes are used.
+\section{CNN Feature Learning and Visualization}
+
+Visualizing the features of a convolutional layer helps one to understand what are the main characteristics of the input that are not only being learned but are also responsible for maximizing neurons activations cite{zeiler2014visualizing}. Until recently there was no clear understanding of why Convolutional Networks perform so well on image classification tasks. Zeiler et al (2014) have produced a novel visualization technique that gives insights into the outputs of the intermediate feature layers of the network. These visualizations were then used to perform diagnostics of models and, thus, find architectures that can outperform current state of the art algorithms. One can understand that all the convolutional layers are in fact "feature extraction" layers while the fully connected ones are the actual classifier.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.6]{layer_vis.png}
+	\caption{CNN layer visualization}
+	\cite{zeiler2014visualizing}
+	\label{fig:conv_layer_vis}
+\end{figure}
+
+Features are learned from more abstract on initial layers to more specific and concrete on deeper layers. Figure ~\ref{fig:conv_layer_vis} shows that the first neurons are learning different types of edges while later neurons are capable of learning full representations of important regions of an image. In general these features are applicable to many datasets and tasks. As features transition from general to specific, transferability becomes negatively affected \cite{yosinski2014transferable}. For instance two similar datasets as the ImageNet and Cifar10 would share many common features and, therefore, a network trained on one, could be used as a pre training or weight initialization process for another, increasing the generalization and accuracy of the model.
+\section{CNN Architectures}
+
+The use of Deep Neural Networks (DNNs) as a prominent technique was mainly possible due to the standardization of the dataset used for such tasks. ImageNet has become the most used classification challenge for those wanting to find better CNN architectures. The main goal of such challenges are to find models with better accuracies without focusing too much on resource utilisation. One one hand, the most important metric of a good machine learning model is its accuracy, in other words, how well it can generalize on different datasets. On the other hand, several other important metrics should be taken into consideration when using an specific DNN system in real life such as: memory footprint, parameters, operations count and etc \cite{canziani2016analysis}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.6]{network_comparison.png}
+	\caption{(Left) Accuracy of Different CNN models (Right) Inference time for different batch sizes}
+	\cite{canziani2016analysis}
+	\label{fig:cnn_comparison}
+\end{figure}
+
+As new methods develop, one should always pick the one that is capable of not only learning the features of the target domain but also would fit the resource capacity of the system. From one of the first CNN architectures (AlexNet) to the latest models (Inception V4), the accuracy has improved from $55\%$ to almost $80\%$ on the ImageNet dataset (comprised of 1.000 different class labels).
 
 \section{Deep Neural Networks Properties}\label{subsec: nn_props}
 

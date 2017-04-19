@@ -161,16 +161,17 @@ def VGG16(include_top=True, weights='imagenet',
                                         cache_subdir='models')
             model.load_weights(weights_path)
             # Extract the last layer from third block of vgg16 model
-            last = model.get_layer('block3_pool').output
-            # Add classification layers on top of it
-            x = Flatten()(last)
-            x = Dense(256, activation='relu')(x)
-            x = Dropout(0.5)(x)
-            pred = Dense(10, activation='sigmoid')(x)
-            model = Model(model.input, pred)
 
-            if K.backend() == 'theano':
-                convert_all_kernels_in_model(model)
+    last = model.get_layer('block3_pool').output
+    # Add classification layers on top of it
+    x = Flatten()(last)
+    x = Dense(256, activation='relu')(x)
+    x = Dropout(0.5)(x)
+    pred = Dense(10, activation='sigmoid')(x)
+    model = Model(model.input, pred)
+
+    if K.backend() == 'theano':
+        convert_all_kernels_in_model(model)
 
 
     return model

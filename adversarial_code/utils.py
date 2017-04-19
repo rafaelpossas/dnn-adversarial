@@ -2,11 +2,10 @@ import numpy as np
 import keras
 from keras.datasets import cifar10
 
+
 class Utils(object):
 
-    def get_samples_per_class(self, y):
-        samples = [smp.argmax() for smp in y]
-        return np.unique(samples, return_counts=True)
+    targets = ['Airplane', 'Automobile', 'Bird', 'Cat', 'Deer', 'Dog', 'Frog', 'Horse', 'Ship', 'Truck']
 
     def get_indexes_to_remove(self, y, values_to_remove, class_number):
         class_labels = [label.argmax() for label in y]
@@ -17,6 +16,33 @@ class Utils(object):
                     indexes.append(ix)
                     values_to_remove -= 1
         return indexes
+
+    def get_samples_by_class(self, x, y, class_index, num_samples=1000):
+        samples = x[self.get_indexes_to_remove(y, num_samples, class_index)]
+        return samples
+
+    def get_adversaries(self, model, x, fake_class_idx, epsilon=0.02, n_steps=1):
+        from adversarial_code.adversarial_tf import Adversarial
+        adv_cls = Adversarial()
+        adversaries = []
+        for cls in x:
+            adv, perturbation = adv_cls._fgsm_k_iter(model=model, fake_class_idx=fake_class_idx,
+                                                     epsilon=epsilon, n_steps=n_steps,
+                                                     img=cls[np.newaxis, :, :, :])
+            adversaries.append(adv)
+        adversaries = np.reshape(adversaries, (len(x), 32, 32, 3))
+        return adversaries
+
+    def format_results_cifar10(self, pred):
+
+        import json
+
+        formatted_result = {}
+        for ix, tgt in enumerate(self.targets):
+            formatted_result[tgt] = pred[0][ix] * 100
+        print(json.dumps(formatted_result, indent=1, sort_keys=True))
+
+        return formatted_result
 
     def load_cifar10(self, normalize=True):
         # The data, shuffled and split between train and test sets:
@@ -35,3 +61,7 @@ class Utils(object):
 
         return x_train, y_train, x_test, y_test
 
+    def get_count_by_class(self, preds, categorical=True):
+        if categorical:
+            preds = [pred.argmax() for pred in preds]
+        return np.unique(preds, return_counts=True)
