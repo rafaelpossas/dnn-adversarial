@@ -15,7 +15,7 @@ utils = Utils()
 nb_epoch = 200
 nb_classes = 10
 
-X_train, y_train, X_test, y_test = utils.load_cifar10(normalize=False)
+X_train, y_train, X_test, y_test = utils.load_cifar10(normalize=True)
 
 nb_train_samples = X_train.shape[0]
 nb_validation_samples = X_test.shape[0]
@@ -25,15 +25,15 @@ number_of_values_to_remove = 4000
 
 for class_number in range(nb_classes):
     model = vgg.model(dropout=True)
-    indexes = utils.get_indexes_to_remove(y_train, number_of_values_to_remove, class_number)
+    indexes = utils.get_indexes_to_remove(y_train, number_of_values_to_remove, class_number, invert=True)
 
-    cur_x_train = np.reshape([img for ix, img in enumerate(X_train) if ix not in indexes], (46000, 32, 32, 3))
-    cur_y_train = np.reshape([lbl for ix, lbl in enumerate(y_train) if ix not in indexes], (46000, 10))
-    model_name = "unbalanced_"+str(class_number)+"_vgg_custom.h5"
+    cur_x_train = np.reshape([img for ix, img in enumerate(X_train) if ix not in indexes], (14000, 32, 32, 3))
+    cur_y_train = np.reshape([lbl for ix, lbl in enumerate(y_train) if ix not in indexes], (14000, 10))
+    model_name = "unbalanced_"+str(class_number)+"_major_vgg_custom.h5"
     vgg.fit(model, cur_x_train, cur_y_train, X_test, y_test, model_name=model_name, data_augmentation=False)
 
-model_name = "balanced_" + str(class_number) + "_vgg_custom.h5"
-vgg.fit(model, X_train, y_train, X_test, y_test, model_name=model_name)
+# model_name = "balanced_" + str(class_number) + "_vgg_custom.h5"
+# vgg.fit(model, X_train, y_train, X_test, y_test, model_name=model_name)
 #
 # model = vgg.model(dropout=True)
 # model.load_weights("./adversarial_code/unbalanced_2_vgg_custom.h5")

@@ -13,10 +13,10 @@ vgg = VGG(32, 32, 3)
 model = vgg.model(dropout=True)
 model.load_weights("normalized/balanced_vgg_custom.h5")
 
-cur_class = 9
+cur_class = 2
 
 smp = utils.get_samples_by_class(x_test, y_test, cur_class, num_samples=1000)
-epsilon = 0.01
+epsilon = 0.03
 file_name = str(epsilon)+"_class_"+str(cur_class)+"_array_adv.pickle"
 print("Creating adversararies for: "+file_name)
 adv = utils.get_adversaries(model, smp, cur_class, epsilon)

@@ -7,12 +7,16 @@ class Utils(object):
 
     targets = ['Airplane', 'Automobile', 'Bird', 'Cat', 'Deer', 'Dog', 'Frog', 'Horse', 'Ship', 'Truck']
 
-    def get_indexes_to_remove(self, y, values_to_remove, class_number):
+    def get_indexes_to_remove(self, y, values_to_remove, class_number, invert=False):
         class_labels = [label.argmax() for label in y]
         indexes = []
+        values_to_remove = values_to_remove if not invert else (9*values_to_remove)
         for ix in range(len(class_labels)):
             if values_to_remove > 0:
-                if class_labels[ix] == class_number:
+                if not invert and class_labels[ix] == class_number:
+                    indexes.append(ix)
+                    values_to_remove -= 1
+                if invert and class_labels[ix] != class_number:
                     indexes.append(ix)
                     values_to_remove -= 1
         return indexes
