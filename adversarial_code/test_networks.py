@@ -9,7 +9,9 @@ import matplotlib.pyplot as plt
 
 targets = ['Airplane', 'Automobile', 'Bird', 'Cat', 'Deer', 'Dog', 'Frog', 'Horse', 'Ship', 'Truck']
 utils = Utils()
-
+X_train, y_train, X_test, y_test = utils.load_cifar10(normalize=True)
+epsilon = 0.01
+all_adv = '../adversarial_code/data/'+str(epsilon)+"_all_adv.pickle"
 
 def get_all_data(class_number, x_test, y_test, x_adv):
     arr = []
@@ -50,11 +52,39 @@ def plot_confusion_matrix(y_test, y_pred):
     # plt.savefig(img_name)
     return plt
 
+def plot_by_model(X_test, y_test, model_path, adv_array, class_number,full_array=False):
+    with open(adv_array, 'rb') as f:
+        x_adv = pickle.load(f)
+    if not full_array:
+        x_adv = get_all_data(class_number, X_test, y_test, x_adv)
+    y_pred = test_by_class(x_adv, model_path)
+    plt = plot_confusion_matrix(y_test, y_pred)
+    plt.show()
 
+def plot_by_model_full_array(model_path, adv_array):
+    with open(adv_array, 'rb') as f:
+        adv_arr = pickle.load(f)
+        x_adv = adv_arr[0]
+        y_adv = adv_arr[1]
+    y_pred = test_by_class(x_adv, model_path)
+    plt = plot_confusion_matrix(y_adv, y_pred)
+    plt.show()
 
-model_path = "../adversarial_code/normalized/balanced_vgg_custom.h5"
-X_train, y_train, X_test, y_test = utils.load_cifar10(normalize=True)
-with open('../adversarial_code/0.01_class_0_array_adv.pickle', 'rb') as f:
-    x_adv = pickle.load(f)
-x_adv = get_all_data(0, X_test, y_test, x_adv)
-test_by_class(x_adv, model_path)
+def get_all_cf_matrices(epsilon, class_number):
+    adv_array = '../adversarial_code/data/'+str(epsilon)+'_class_'+str(class_number)+'_array_adv.pickle'
+    print("Perturbed Balanced Network")
+    plot_by_model(X_test, y_test, "../adversarial_code/normalized/balanced_vgg_custom.h5", adv_array, class_number)
+    print("Non-Perturbed/perturbed unbalanced on class")
+    y_pred = test_by_class(X_test, "../adversarial_code/normalized/unbalanced_"+str(class_number)+"_vgg_custom.h5")
+    plt = plot_confusion_matrix(y_test, y_pred)
+    plot_by_model(X_test, y_test, "../adversarial_code/normalized/unbalanced_"+str(0)+"_vgg_custom.h5", adv_array, class_number)
+    print("Non-perturbed/perturbed unbalanced on other classes")
+    y_pred = test_by_class(X_test, "../adversarial_code/normalized/unbalanced_"+str(class_number)+"_major_vgg_custom.h5")
+    plt = plot_confusion_matrix(y_test, y_pred)
+    plot_by_model(X_test, y_test, "../adversarial_code/normalized/unbalanced_"+str(class_number)+"_major_vgg_custom.h5",
+                  adv_array, class_number)
+
+adv_0_array = '../adversarial_code/data/'+str(epsilon)+"_class_0_array_adv.pickle"
+
+plot_by_model_full_array("../adversarial_code/normalized/unbalanced_0_major_vgg_custom.h5", all_adv)
+
