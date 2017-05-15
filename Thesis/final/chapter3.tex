@@ -66,7 +66,7 @@ The extension of the fast method is reached by applying the gradient sign multip
 \end{figure}
 
 
-\section{Ascent and Descent Perturbations}
+\section{Ascent and Descent Perturbations}\label{sec:gsm}
 
 Adding or subtracting noise from images would have different generated adversaries. By adding noise to an image, one would be making the gradient to go "uphill" and therefore moving away from the desired class, this results in an increase in value of the loss function and thus should be referred as the Ascent Method. On the other hand, when moving the opposite direction (down), one would be doing a process similar to the optimization of a loss function where we approach the minimum of a function and, thus, we get closer to the desired class, this approach is hereby known as the Descent Method. These two methods can be coupled with iterative methods or fast to take progressive/single steps towards a class directions. Some images/classes would be more robust to these perturbations and would, therefore, require more iterations.
 

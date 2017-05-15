@@ -38,13 +38,6 @@ Christoph Goller and Andreas Kuchler.
 \newblock In {\em Neural Networks, 1996., IEEE International Conference on},
   volume~1, pages 347--352. IEEE, 1996.
 
-\bibitem{goodfellow2014generative}
-Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
-  Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
-\newblock Generative adversarial nets.
-\newblock In {\em Advances in neural information processing systems}, pages
-  2672--2680, 2014.
-
 \bibitem{goodfellow2014}
 Ian~J Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
@@ -68,10 +61,20 @@ Kurt Hornik, Maxwell Stinchcombe, and Halbert White.
 \newblock Multilayer feedforward networks are universal approximators.
 \newblock {\em Neural networks}, 2(5):359--366, 1989.
 
+\bibitem{japkowicz2002class}
+Nathalie Japkowicz and Shaju Stephen.
+\newblock The class imbalance problem: A systematic study.
+\newblock {\em Intelligent data analysis}, 6(5):429--449, 2002.
+
 \bibitem{stanford2016}
 Andrej Karpathy.
 \newblock Convolutional neural networks for visual recognition.
 \newblock 2016.
+
+\bibitem{krawczyk2016learning}
+Bartosz Krawczyk.
+\newblock Learning from imbalanced data: open challenges and future directions.
+\newblock {\em Progress in Artificial Intelligence}, 5(4):221--232, 2016.
 
 \bibitem{krizhevsky_2009}
 Alex Krizhevsky.

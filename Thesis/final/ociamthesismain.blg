@@ -14,8 +14,8 @@ A level-1 auxiliary file: appendix2.aux
 The style file: plain.bst
 Database file #1: refs.bib
 Warning--entry type for "papernot_thesis_2016" isn't style-file defined
---line 117 of file refs.bib
-Repeated entry---line 262 of file refs.bib
+--line 137 of file refs.bib
+Repeated entry---line 282 of file refs.bib
  : @inproceedings{zeiler2014visualizing
  :                                     ,
 I'm skipping whatever remains of this entry

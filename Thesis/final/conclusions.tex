@@ -1,3 +1,16 @@
 \chapter{Conclusion}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Adversarial methods are proven to increase the domain shift effect on test datasets as it is explained by Papernot et al (2016) \cite{papernot2016transf}. Yet, one should be careful when trying to interpret this shift without actually understanding how the feature space was actually explored. The imbalanced learning problem is not intensified by Adversaries created with the same class gradient. It should be noted that the effectiveness of the method dependence is twofold: how strong a specific class gradient is on the overall dataset and the space occupied by its distribution in space.
+
+The right relationship between gradient strength and target class distribution is what causes networks to misclassify examples. A strong enough gradient would mean bigger steps towards other distributions and a small gradient would not have enough strength to move points from outside of their distributions. In order to keep perturbation constants across different models, one would need to tune $\epsilon$ accordingly in order to generate images with the lowest amount of noise possible and still get a successful attack. Until now, most of the studies in adversaries were aimed in created methods that could effectively create those perturbations, however, one should aim to understand its characteristics more deeply as this not only helps to understand networks vulnerabilities but also provides new tools to explain the "black box" effects of deep neural nets. The answer to our major hypotheses are as follows:
+
+\begin{itemize}
+	\item \textbf{(H1)} - Adversaries still reduce the overall accuracy when compared to a fully balanced model, but in a lower degree when compared to the same perturbation applied to a model trained without any form of imbalance
+	\item \textbf{(H2)} - The effects on this case are almost negligible, the networks were able to resist attacks really well, and the average reduction of accuracy was around ~1-2\% on most cases
+	\item \textbf{(H3)} - Attacks on classes with overlapping distributions do intensify the natural behavior, as this situation really opens the ideal vulnerability adversaries are looking for.
+	\item \textbf{(H4)}
+\end{itemize}
+
+This work sheds an important light on machine learning methods. Several real-life models are deeply concerned with possible vulnerabilities of their system, and studies on this field were being done for the past 20 years. Still, the imbalance learning problem remains one of the big questions in artificial intelligence. Adversarial attacks are one more concern for those working with such systems, but could also be seen as a tool that could forcibly make a model to stretch its occupation over the data domain space. Every new threat to predictive techniques is also a new improvement over model generalisation capabilities as the creation of the former could be used to improve the latter. Imbalanced datasets can be seen as one way of avoiding adversarial attacks, as the both lack and extreme excess of data space exploration seems to increase models robustness to such attacks
+
+\section{Future Work}
