@@ -25,31 +25,29 @@ The adversarial test shows this results from two perspectives. Firstly, on the c
 \begin{table}[H]
 	\centering
 	
-	\begin{tabular}{lcccc}
+	\begin{tabular}{lcccccc}
 		\toprule
-		&\multicolumn{2}{c}{Class undersampling}
-		&
-		\multicolumn{2}{c}{Class oversampling} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
-		Class Label &Non-Perturbed& Perturbed    & Non-Perturbed & Perturbed      \\
+		&\multicolumn{2}{c}{Balanced}
+		&\multicolumn{2}{c}{Undersampling}
+		&\multicolumn{2}{c}{Oversampling} 
+		\\\cmidrule(r){2-3}\cmidrule(l){4-5}\cmidrule(l){6-7}
+		Class Label &Non-Pert. &Pert. &Non-Pert. &Pert. &Non-Pert. &Pert.      \\
 		\midrule
-		0 - Airplane &69\%& 60\%    & 89\% &87\%      \\
-		1 - Automobile &77\%& 64\%    & 93\% &91\%      \\
-		2 - Bird &48\%& 38\%    & 79\% &73\%      \\
-		3 - Cat &26\%& 21\%    & 76\% &72\%      \\
-		4 - Deer &70\%& 58\%    & 85\% &80\%      \\
-		5 - Dog &58\%& 47\%    & 80\% &76\%      \\
-		6 - Frog &83\%& 76\%    & 89\% &88\%      \\
-		7 - Horse &69\%& 59\%    & 90\% &88\%      \\
-		8 - Ship &80\%& 69\%    & 92\% &89\%      \\
-		9 - Truck &80\%& 46\%    & 91\% &87\%      \\
+		0 - Airplane &84\%& 36\% &69\%& 19\%    & 89\% &87\%      \\
+		1 - Automobile &88\%& 23\% &77\%& 16\%    & 93\% &91\%      \\
+		2 - Bird &80\%& 20\% &48\%& 9.4\%    & 79\% &73\%      \\
+		3 - Cat &69\%& 11\% &26\%& 0.5\%    & 76\% &72\%      \\
+		4 - Deer &85\%& 20\% &70\%& 9.8\%    & 85\% &80\%      \\
+		5 - Dog &77\%& 15\% &58\%& 9\%    & 80\% &76\%      \\
+		6 - Frog &88\%& 27\% &83\%& 20\%    & 89\% &88\%      \\
+		7 - Horse &83\%& 20\% &69\%& 18\%    & 90\% &88\%      \\
+		8 - Ship &90\%& 37\% &80\%& 19\%    & 92\% &89\%      \\
+		9 - Truck &93\%& 49\% &80\%& 21\%    & 91\% &87\%      \\
 		\bottomrule
 	\end{tabular}
 	\caption{Results for the undersampling and oversampling models}
 	\label{tbl:results}
 \end{table}
-
-
-
 
 \section{Overlapping distributions}
 When objects in the dataset already have distributions that are very clear to one another the effects of adversarial seems to be stronger. Figure ~\ref{fig:conf_matrix_full} shows that for the pairs Cat/Dog and Automobile/Truck, misclassification naturally happens towards one another due to similarities in their feature space \cite{stanford2016}. On this case, our experiment shows that the adversarial attack intensifies the property by increasing the number on which one class is picked over another. This property gives interesting insights, as it shows that the gradient sign is really navigating around the target class distribution and when a overlap occurs it becomes easier to create an adversarial.
