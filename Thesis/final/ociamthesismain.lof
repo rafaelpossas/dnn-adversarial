@@ -18,10 +18,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces VGG16 on ImageNet\relax }}{27}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Results on the full dataset\relax }}{29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Target class accuracy on all the 20 per-class models\relax }}{31}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Target class accuracy on all models\relax }}{32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Individual class accuracy on the balanced model\relax }}{34}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Top Left and Right: Cat undersampling / oversampling with perturbation. Bottom Left and Right: Dog undersampling / oversampling with perturbation\relax }}{36}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Individual class perturbed accuracy on the balanced model\relax }}{34}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Relative difference for each model. Higher numbers means more vulnerability\relax }}{36}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Top Left and Right: Cat undersampling / oversampling with perturbation. Bottom Left and Right: Dog undersampling / oversampling with perturbation\relax }}{37}
 \addvspace {10\p@ }

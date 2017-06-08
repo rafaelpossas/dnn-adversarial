@@ -30,13 +30,12 @@
 \contentsline {section}{\numberline {5.3}Overall Training Process}{27}
 \contentsline {section}{\numberline {5.4}Perturbation method}{30}
 \contentsline {section}{\numberline {5.5}Synthetic data level imbalance}{31}
-\contentsline {section}{\numberline {5.6}Hypotheses formulations}{32}
+\contentsline {section}{\numberline {5.6}Experiment goals}{32}
 \contentsline {chapter}{\numberline {6}Results}{33}
 \contentsline {section}{\numberline {6.1}Fully balanced model}{33}
 \contentsline {section}{\numberline {6.2}Class undersampling and oversampling}{34}
-\contentsline {section}{\numberline {6.3}Overlapping distributions}{35}
-\contentsline {chapter}{\numberline {7}Conclusion}{37}
-\contentsline {section}{\numberline {7.1}Future Work}{38}
-\contentsline {chapter}{\numberline {A}Sample Title}{39}
-\contentsline {chapter}{\numberline {B}Sample Title}{40}
+\contentsline {section}{\numberline {6.3}Transfer Learning}{36}
+\contentsline {section}{\numberline {6.4}Overlapping distributions}{36}
+\contentsline {chapter}{\numberline {7}Conclusion}{39}
+\contentsline {section}{\numberline {7.1}Future Work}{40}
 \contentsline {chapter}{Bibliography}{41}
