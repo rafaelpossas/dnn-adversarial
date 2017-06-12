@@ -47,8 +47,8 @@ Krizhevsky, A.: Cifar-10 and cifar-100 datasets (2009),
 Kurakin, A., Goodfellow, I., Bengio, S.: Adversarial examples in the physical
   world. Tech. rep., arXiv (2016), \url{http://arxiv.org/abs/1607.02533}
 
-\bibitem{papernot_2017}
-Papernot, N.: Machine learning in adversarial settings (2017)
+\bibitem{murphey2004}
+Murphey, YI~L, G.H.: Neural learning from unbalanced data  (2004)
 
 \bibitem{papernot2016transf}
 Papernot, N., McDaniel, P., Goodfellow, I.: Transferability in machine

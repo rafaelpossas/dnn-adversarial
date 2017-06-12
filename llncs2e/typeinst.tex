@@ -34,7 +34,7 @@
 
 % first the title is needed
 \title{Effectiveness of adversarial examples on class-imbalanced Convolutional Neural Networks}
-
+\titlerunning{Imbalanced Learning and Adversarial Examples}
 % a short form should be given in case it is too long for the running head
 
 % the name(s) of the author(s) follow(s) next
@@ -45,7 +45,7 @@
 %
 \author{Rafael Possas, Ying Zhou}
 %
-\authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
+\authorrunning{Imbalanced Learning and Adversarial Examples}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
@@ -67,57 +67,61 @@
 
 
 \begin{abstract}
-Image recognition and machine learning have been one of the most fast paced fields of Artificial Intelligence. A considerable amount of literature was published on the performance of Convolutional Neural Networks and the field has evolved considerably in the last years. However, as most machine learning methods, these networks suffer from the data imbalance problem. When the underlying training dataset is comprised of unequal number of samples for each label/class. Such difference naturally causes a phenomenon known as domain shift, which can be explained by the low generalisation capabilities of a model when presented with previously unseen data. Recent research have focused on a technique called Gradient Sign that forces domain shift on deep networks by creating adversarial examples. These are usually comprised of small directed changes on original data points that causes inputs to be misclassified by the predictive algorithm. Recent developments in such methods have heightened the need for better of understanding of this phenomena. This study focuses on an experimental approach that sheds light on the link between the imbalanced learning problem and adversarial examples. Through a series of experiments we try to find intuitive explanations behind the success of gradient sign methods and we evaluate their effectiveness against models trained on imbalanced datasets
-\keywords{convolutional neural networks, adversarial examples, gradient sign, imbalanced training
-the abstract section}
+A considerable amount of literature was published on the performance of Convolutional Neural Networks and the field has evolved considerably in the last years. However, as most machine learning methods, these networks suffer from the data imbalance problem - when the underlying training dataset is comprised of unequal number of samples for each label/class. Such difference naturally causes a phenomenon known as domain shift, which can be explained by the low generalisation capabilities of a model when presented with previously unseen data. Recent research have focused on a technique called Gradient Sign that forces domain shift on deep networks by creating adversarial examples. These are usually comprised of small directed changes on original data points that causes inputs to be misclassified by the predictive algorithm. Recent developments in such methods have heightened the need for better of understanding of this phenomena. This study focuses on an experimental approach that sheds light on the link between the imbalanced learning problem and adversarial examples. Through a series of experiments we try to find intuitive explanations behind the success of gradient sign methods and we evaluate their effectiveness against models trained on imbalanced datasets
+\keywords{convolutional neural networks, adversarial examples, gradient sign, imbalanced training}
 \end{abstract}
 
 
 \section{Motivation}
 
-Convolutional Networks are a class of deep learning algorithms that can use many layers of nonlinear or linear processing in cascade for feature extraction and transformation. They are still very similar to ordinary Neural Networks (made up of neurons that have learnable weights and biases). However, such algorithms makes the explicit assumption that the inputs are images and, therefore, are based on learning abstract representations of data with spatial properties \cite{canziani2016analysis}. 
+Until recently, convolutional neural networks were known for having high generalisation capabilities, however, methods using the internal model information were proven to successfully reduce their performance by creating inputs known as Adversarial Examples \cite{goodfellow2014}.
 
-Until recently, these networks were known for having high generalisation capabilities, however, methods using the internal model information were proven to successfully reduce their performance by creating inputs known as Adversarial Examples \cite{goodfellow2014}.
-
-Adversaries can successfully force domain shift in such a way that the model becomes unable to generalise well on perturbed samples. Since training data in most circumstances can not cover the entire feature space, the real decision boundary of a classification model generally becomes more complex as the phenomenon becomes more nuanced and the feature and dimension space becomes larger \cite{goodfellow2016_book}. This can be exploited by adversaries through the use of the model error as a guideline for perturbing a sample that can successfully cause a misclassification of the input by the targeted system.
+Adversaries can successfully force domain shift in such a way that the model becomes unable to generalise well on perturbed samples. Since training data in most circumstances can not cover the entire feature space, the real decision boundary of a classification model generally becomes more complex as the phenomenon becomes more nuanced and the feature and dimension space becomes larger \cite{goodfellow2016_book}.
 
 Besides the near human performance of deep convolutional neural networks, adversaries are still capable of forcing domain shift on classes with overlapping or similar distributions. This problem could then become critical when these adversaries are used to attack models where the training data has a large variance on the number of samples per class. 
 
 \section{Related Work}
 
-Recent work has shown that the generalisation capabilities of deep networks is rather sparse \cite{goodfellow2016}, \cite{papernot2016transf}. Thus, there is an opportunity for methods to exploit empty pockets of space and, hence, systematically create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion. This can be done by adding just enough intentional noise to each pixel of the image so as to fool an algorithm into thinking that the image has an incorrect label \cite{goodfellow2014}, \cite{goodfellow2016}, \cite{papernot2016transf}, \cite{szegedy2013}. The resulting outcome of these methods are known as Adversarial Examples.
+Recent work has shown that the generalisation capabilities of deep networks is rather sparse \cite{goodfellow2016}, \cite{papernot2016transf}. Thus, there is an opportunity for methods to exploit empty pockets of space and, hence, systematically create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion. This can be done by adding just enough intentional noise to each pixel of the image so as to fool an algorithm into thinking that the image has an incorrect label \cite{goodfellow2014}, \cite{goodfellow2016}, \cite{papernot2016transf}, \cite{szegedy2013}.
 
-The Gradient Sign method developed by Goodfellow et al. (2014) has been used as the foundation of many of the experiments in adversarial crafting. The results have shown that DNNs can possibly have linear behavior in very high dimensional spaces.  Most inputs were miss-classified not only on Goodfellow et. al \cite{goodfellow2014}  experiments but many others \cite{billovits},\cite{goodfellow2016},\cite{papernot2016}.
+The Gradient Sign method developed by Goodfellow et al. (2014) has been used as the foundation of many of the experiments in adversarial crafting on CNNs. The results have shown that the model can possibly have linear behavior in very high dimensional spaces.  Most inputs were miss-classified not only on Goodfellow et. al \cite{goodfellow2014}  experiments but many others \cite{billovits},\cite{goodfellow2016},\cite{papernot2016}.
 
 Developing robustness to adversarial examples has been approached many times as academic work, recent research \cite{papernot2016} has shown that one can use transfer learning \cite{yosinski2014transferable} to perform black-box attacks against Deep Neural Networks.The combination of adversaries and transfer learning creates a threat vector for many state of the art methods. Attacks can, however, depend on some specific information of the target \cite{papernot2016transf}. As most recent applied methods depend on the network gradient information, there is a straight dependence on the network confidence per class label and the robustness of the model to adversarial attacks.
 
-Imbalanced learning is a well known cause for lower performance of several machine learning algorithms \cite{japkowicz2002class}, \cite{krawczyk2016learning}. Data distribution on real world is often skewed and rarely contains enough information to learn all the required features of the data domain. As the dependency of specific class labels grows, the vulnerability of the system increases as wrong predictions of the critical label could lead to unwanted outcomes. Adversaries are proven to explore class distributions vicinities, and the question whether imbalanced training sets affects them is still unanswered.
-
-This work presents an experimental approach aimed on the understanding of the factors leading to robustness to adversarial attacks on class imbalanced convolutional neural networks. Through the use of the Fast Gradient Sign Method we investigate how a skewed data distribution could affect the network resilience to such attacks. The understanding of such threat vectors is of the utmost importance for the development of current techniques, as it drives the creation of new regularisation techniques.
-
-
-
-
+Imbalanced learning is a well known cause for lower performance of several machine learning algorithms \cite{japkowicz2002class}, \cite{krawczyk2016learning}. Data distribution on real world is often skewed and rarely contains enough information to learn all the required features of the data domain. Adversaries are proven to explore class distributions vicinities, and the question whether imbalanced training sets affects them is still unanswered.
 
 
 \section{Initial Setup}
 
-For the purposes of this work, we aimed to use a dataset that could not only be visually rich but also could facilitate analysis between different class labels. The 2014 ImageNet dataset \cite{deng2009imagenet} would be the natural choice, however, the amount of classes would make it harder to make comparisons, as the number of classes is around 1,000. We use a dataset with similar characteristics, the CIFAR-10 \cite{krizhevsky_2009}. It contains 10 different class labels of 32x32 images, which makes it easier to train our algorithm from scratch and also to understand deeper relationships between class labels.
-\subsection{Network Architecture}
-In terms of network architecture, we looked into the ILSVRC competition for the highest performers.From all networks tested on Canziani et al (2016) \cite{canziani2016analysis}, the VGG16-19 from Simonyan et al. (2014) \cite{simonyan2014very}  seemed to have the best trade off between accuracy and performance (inference time). The VGG architecture won the first and second places on the ILSVRC-2014 submission on the localisation and classification task.The main contribution of the VGG network was showing that the depth of the network is a critical component for good classification performance. The model can be assembled with 16 or 19 Conv/FC layers and it features an extremely homogenous architecture that only performs 3x3 convolutions and 2x2 pooling from beginning to end.
+For the purposes of this work, we aimed to use a dataset that could not only be visually rich but also could facilitate analysis between different class labels. The 2014 ImageNet dataset \cite{deng2009imagenet} would be the natural choice, however, the amount of classes would make it harder to perform comparisons, as the number of classes is around 1,000. We use a dataset with similar characteristics, the CIFAR-10 \cite{krizhevsky_2009}. It contains 10 different class labels of 32x32 images, which enables us to easily train our algorithm from scratch and also to understand deeper relationships between class labels.
+\subsection{Network Architecture and parameters}
+
+All the experiments were done using the VGG architecture \cite{simonyan2014very}. The two FC-4096 layers were replaced by one single layer with 512 neurons and RELU activations. In addition, the total number of convolutions blocks and pooling were reduced to 3, with the first layer having 2 stacked convolution layers followed by a max pooling of stride 2x2 and the last two layers with 3 stacked convolutions also followed by a max pooling of stride 2x2. We have used RMSProp  \cite{bengiormsprop} as the optimisation technique with a learning rate of $10^{-4}$ and the decay $10^{-5}$.
 
 
-The design of the VGG16 has been proven to work even on datasets with several classes that are very different from each other. As the dataset used in this work has only 10 classes, the two FC-4096 layers were replaced by one single layer with 512 neurons and RELU activations. In addition, the total number of convolutions blocks and pooling were reduced to 3, with the first layer having 2 stacked convolution layers followed by a max pooling of stride 2x2 and the last two layers with 3 stacked convolutions also followed by a max pooling of stride 2x2. Since CIFAR-10 images are only 32x32, the original VGG16 architecture would end up having an output of shape of only 1x1 pixel at the last layer. In order to avoid this problem, the number of layers were reduced so to fit our dataset domain
-\subsection{Training Parameters}
-The optimisation technique used in this work was developed by Bengio (2015) \cite{bengiormsprop}, namely RMSProp. This method is an adaptive learning rate scheme that can take the absolute values of the Hessian's eigenvalues and, therefore, approximate the equilibration pre-conditioner. As shown on Bengio's work \cite{bengiormsprop}, the method outperforms current SGD methods by achieving convergence faster.The learning rate for the method was set at $10^{-4}$ and the decay $10^{-5}$.
+\begin{figure}
+	\centering
+	\includegraphics[height=6.5cm]{graph_non_pert.png}
+	\caption{Target class accuracy on all models}
+	\label{fig:acc_graph}
+\end{figure}
 
-Our architecture was trained until no more reasonable changes  $\delta$ were detected in the validation loss so we could dismiss unnecessary training steps and consequently any kind of over-fitting. This was achieved by using the Early Stopping technique with a $\delta$ of $10^{-4}$. For instance, training would be stopped if no improvement over the specified $\delta$ was seen for 10 steps in a row.The results on the full dataset are shown on figure~\ref{fig:conf_matrix_full}.
+\subsection{Synthetic data imbalance}
+
+As the CIFAR10 dataset is not naturally imbalanced, we have artificially created two variations on which we trained our networks.  While one dataset consisted on a direct under-sample of the target class to 1,000 samples, the other was crafted using  an oversampling of the target class(or an under-sampling of all other classes). We kept the number of samples for the target class at 5,000 while all other classes were reduced to 1,000 samples each. For each class of the 2 different dataset configurations, a network was then trained until convergence using the same hyper-parameters as the balanced case. Each model was evaluated against a test set of 10,000 equally distributed samples with the target class being perturbed by its own under/over-sampled model and the balanced model. Both imbalanced networks were separately tested for each class for both same model and different model adversaries. The same model test aims to understand the vulnerability of class imbalance on adversarial examples while the different model test main goal is to verify the robustness on transfer learning environments. In total we evaluated 50 different combinations: 20 for each different imbalanced dataset (same model gradient and balanced network gradient) and 10 for the balanced network using its own gradients on each class. Figure ~\ref{fig:acc_graph} shows the accuracy for the models without any perturbation.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[height=3.5cm]{panda.png}
+	\caption{Adversarial example crafting with fast gradient sign \cite{goodfellow2014}.}
+	\label{fig:fgsm_craft}
+\end{figure}
 
 \subsection{Gradient Sign methods}
 
-The Gradient Sign is an exploitation of the loss function in an optimization process so one can maximize any class score for a given input image \cite{papernot2016}. Since everything in a ConvNet is differentiable it is relatively straight forward to compute the gradient information of any specific class of the input domain. Basically we choose an  output and we apply the reshaped gradient computation of that class to our input using equations 1 or 2.
+The Gradient Sign is a method that uses internal gradient information so as to create directed perturbation to test data. Whether one adds or subtract noise according to equations 1 and 2, the resulting label will have different meanings. Suppose the current true label of the class is selected as a gradient candidate, adding noise would mean that we increase the cost function of our input towards itself while subtracting noise is that same as minimizing our loss even further. These approaches will from now on be referred as ascent and descent methods. Perturbations could also be applied by two different variations of the gradient sign \cite{goodfellow2014}. While the Fast Gradient Sign applies a single perturbation to the input, the Iterative Gradient Sign performs the same perturbation iteratively.
 
-Adding or subtracting noise  from images will generate different adversaries. Supposed we choose the same class gradient, adding noise $\delta$ to an image, one would be making the gradient to go "uphill" and therefore moving away from the class, this results in an increase in value of the loss function and thus should be referred as the Ascent Method. On the other hand, when moving the opposite direction (down), one would be doing a process similar to the optimization of a loss function where we approach the minimum of a function and, thus, we get closer to the desired class, this approach is hereby known as the Descent Method. When applying the perturbation we are only interested in the direction of the gradient and not its magnitude, therefore, we take the sign of the gradient and we control its magnitude through the $\epsilon$ parameter. Equations 1 and 2 are respectively for the ascent and descent perturbations described in this section.
 
 \begin{equation}
 C(x + \delta)\approx C(x) + \epsilon * sign(\nabla C)
@@ -126,37 +130,34 @@ C(x + \delta)\approx C(x) + \epsilon * sign(\nabla C)
 C(x + \delta)\approx C(x) - \epsilon * sign(\nabla C)
 \end{equation}
 
-Perturbations could be applied once or many times in order to successfully create an adversary. When only one iteration of perturbations is applied, we call the method FGSM (Fast Gradient Sign Method). On the other hand, applying the same perturbation many times is known as IGSM (Iterative Gradient Sign Method) \cite{goodfellow2014}. The latter could always end up into changing the classification output as it can be seen as taking small steps into the direction of our $\nabla C$. 
 \subsection{Backpropagated Class Gradient}
 
-The choice of the backpropagated class gradient has direct influence on the generated adversary. For instance, one could select a specific class as the target of a perturbation but this would ultimately introduce undesirable variance when crafting adversaries for our experiment, as each class could have different effects within our target and, thus, the perturbation could be different on each case. In order to address this problem, we have chosen the class itself as the backpropagated gradient coupled with the ascent method. The intuition behind this choice is that we look to increase the cost function of the target class by moving away from the current label.
-
-For all classes, the amount of change on each pixel needed to be carefully chosen as we did not want to change an image too much to a point where it would be unrecognizable to human perception. Moreover, in order to test our networks, we needed an $\epsilon$ value that would provide only the minimum amount of perturbation to all classes so as to push most of the samples to the closest vicinity leading to a successful misclassification. From all the trials performed, the value of $\epsilon$ that seemed to fulfill our needs was 0.01. 
+The choice of the backpropagated class gradient has direct influence on the generated adversary. In order to reduce the variability of our experiment, we have chosen the true sample label as the backpropagated gradient coupled with the ascent method. The intuition behind this choice is that we look to increase the cost function of the target class by moving away from the current label. Moreover, in order to test our networks, we needed an $\epsilon$ value that would provide only the minimum amount of perturbation to all classes so as to push most of the samples to the closest vicinity leading to a successful misclassification. From all the trials performed, the value of $\epsilon$ that seemed to fulfill our needs was 0.01. 
 \begin{figure}
 	\centering
 	\includegraphics[height=6.5cm]{conf_matrix.png}
 	\caption{Results of our adapted VGG architecture on CIFAR-10 dataset}
 	\label{fig:conf_matrix_full}
 \end{figure}
-\subsection{Same and Different model perturbations}
-Another important choice was regarding which trained network would serve as the baseline for our gradient calculation. We have generated perturbation using two different networks on each of the 10 classes. We first generate one model for each class using an undersampled and oversampled datasets. Then for each of these models we created adversaries using its own current model and the balanced network. The balanced network itself was also tested using its own adversaries on all 10 classes at once to serve as baseline for our comparison. From now on we call this same model pertubation and different model pertubation, each being subdivided into the undersample and oversample case.
+
 
 \section{Results}
-The objective of this research is to understand the effects of adversarial attacks on imbalanced CNNs. However, it is firstly required to create the baseline for our comparisons. This consists of creating perturbation on every class label and querying its accuracy on a fully balanced model. Canonical models assume that every object in the dataset are sampled from similar distributions. However, in real-life situations, even though the number of samples is the same, some class labels could be poorly represented by the lack of a clear structure. This could often lead to differences in the output for each specific class \cite{krawczyk2016learning}. On this way, a superficially balanced dataset does not guarantee that the model will equally generalise across all classes.
+The baseline of our comparison is done through the performance of a balanced network to adversarial attacks. Table~\ref{tbl:results} shows that the accuracy for all classes is drastically reduced when the balanced model is presented with adversarial examples. The effectiveness of the adversarial attack can be partially explained by the balancing of the dataset itself. In a model where the dataset used in training aims for normalization over all classes, the network is often caught in trying to find weights and biases that generalizes well over all set of labels. Therefore, small perturbations become more efficient due to a bigger proximity of classes distributions in space.
+
+
+\subsection{Class under-sampling and over-sampling}
+
+Networks with imbalanced datasets were more vulnerable when presented with adversarial examples. Figure~\ref{fig:relative_difference} shows the relative difference for all the three networks (balanced, under-sampled and over-sampled).  The values were calculated by finding the difference between the new accuracy and the non-perturbed accuracy. They represent the percentage on which the initial accuracy was reduced. The under-sampled model had the higher relative difference on average, which shows that the imbalanced nature of the dataset ended-up increasing the vulnerability of the model.
 \begin{figure}
 	\centering
-	\includegraphics[height=6.5cm]{balanced_perturbed.png}
-	\caption{Individual class perturbed accuracy on the balanced model}
-	\label{fig:balanced_perturbed}
+	\includegraphics[height=4.5cm]{class_dist.png}
+	\caption{Dataset imbalance causes models to perform adjustments of decision boundaries leading to an increase on accuracy of the majority class and decrease on the minority class.}
+	\label{fig:class_dist}
 \end{figure}
 
-Figure ~\ref{fig:balanced_perturbed} shows that the accuracy for all classes is drastically reduced when the balanced model is presented with adversarial examples. Even though there is enough samples for each class, the adversarial attack forces the domain shift of each individual sample towards different regions in space, causing a misclassification of the current label. The effectiveness of the adversarial attack can be partially explained by the balancing of the dataset itself. In a model where the dataset used in training aims for normalization over all classes, the network is often caught in trying to find weights and biases that generalizes well over all set of labels. Therefore, perturbations become more efficient due to a bigger proximity of classes distributions in space.
-\subsection{Class under-sampling and over-sampling}
-The adversarial test shows the results from two perspectives. First, on the class under-sampling with same model the accuracy for each individual class was on average 15\%, which already demonstrates higher vulnerability when compared to the balanced case. This could be explained by having the data distribution of that specific class being squished into a smaller space and, hence, decreasing the amount of perturbation required to effectively increase the cost function so as to a misclassification to happen. Therefore, the degree of the perturbation required is reduced since the class label did not explore the feature space accordingly. Second, when oversampling occurs, it is expected to have the target class expanding into space and taking as much space as possible when compared to other classes. This happens since the network performs more gradient updates on that specific class due to the amount of available samples. Perturbation on this case had a lower effect, as the small push cause by our $\epsilon$ was not enough to move points to outside of their distributions.
+Class imbalanced models are naturally affected by the false positive and false negative trade off shown on figure~\ref{fig:class_dist}. The decision boundaries on such models favor the class with more samples and, hence, increases the accuracy for one class while decreasing for the other classes. The area under the curve for misclassified examples on the under-sampled distribution is bigger, and it is caused by the suboptimal exploration of feature space of that class. This effect is exploited by adversaries as there is an increase on the misclassification rate of distributions with lower amplitude. An under-sample of a specific label causes its distribution to be squished into space and, hence, have less impact on the definition of decision boundaries.
 
-
-
-\begin{table}[H]
+\begin{table}
 	\centering
 	
 	\begin{tabular}{lccccc}
@@ -176,247 +177,66 @@ The adversarial test shows the results from two perspectives. First, on the clas
 		7 - Horse &59\%& 88\% &20\%& 18\%    & 52\% \\
 		8 - Ship &69\%& 89\% &37\%& 19\%    & 59\% \\
 		9 - Truck &46\%& 87\% &49\%& 21\%    & 54\% \\
-		\bottomrule	
+		\bottomrule
 		\hfill
 	\end{tabular}
 	\caption{Results for the two different sources of perturbations along with the two different imbalanced datasets}
 	\label{tbl:results}
 \end{table}
 
-As the number of samples on a target class goes down, an increase of vulnerability towards that specific label is expected when compared to the balanced model. The results on table  ~\ref{tbl:results} confirms this. Networks with imbalanced datasets were more vulnerable when presented with adversarial examples. Figure ~\ref{fig:relative_difference} shows the relative difference for all the three networks (balanced, under-sampled and oversampled).  The values were calculated by finding the ratio between the new accuracy and the non-perturbed accuracy. They represent the percentage on which the initial accuracy was reduced. The under-sampled model had the higher relative difference on average, which shows that the imbalanced nature of the dataset ended-up increasing the vulnerability of the model. This poses threats to current systems as the low amount of samples during training for a specific class would  create gaps that are more easily exploited when compared to a balanced network.
+Perturbation on the over-sampling case had a lower effect, as the small push caused by our $\epsilon$ was not enough to move points to outside of their distributions. Objects of the over-sampled classes would need bigger steps in order to successfully create an adversarial that leads to a wrong classification label. Accuracy for most cases of the over-sampling case was around 45\% and the relative difference was the lowest of all three models, which shows robustness towards the target class. 
 
-\begin{figure}[H]
+The increased number of samples of the over-sampled label, causes the network to perform a trade-off when optimizing its loss function. For instance, the decision boundary would be chosen in order to minimize the total error of the network. The cost function is lower when the decision boundary minimizes the misclassification of the majority class as there is a higher number of samples. The choice of a biased decision boundary could be one of the factors explaining the higher resilience of over-sampled networks.
+
+\begin{figure}
 	\centering
 	\includegraphics[height=6.5cm]{rel_diff_graph.png}
 	\caption{Relative difference for each model. Higher numbers means more vulnerability}
 	\label{fig:relative_difference}
 \end{figure}
 
-\subsubsection{Headings.}
+\subsection{Transfer Learning}
 
-Headings should be capitalized
-(i.e., nouns, verbs, and all other words
-except articles, prepositions, and conjunctions should be set with an
-initial capital) and should,
-with the exception of the title, be aligned to the left.
-Words joined by a hyphen are subject to a special rule. If the first
-word can stand alone, the second word should be capitalized.
+The use of a different model for creating adversaries has shown less effective when compared to the same model attack. As the overall gradient have not only different direction but also magnitudes, the attacked system has proven to be more robust. The experiment reveals that although Gradient Sign is quite effective for fooling networks it does require a good amount of knowledge from the underlying training parameters so as to unleash its full potential.
 
-Here are some examples of headings: ``Criteria to Disprove
-Context-Freeness of Collage Language", ``On Correcting the Intrusion of
-Tracing Non-deterministic Programs by Software", ``A User-Friendly and
-Extendable Data Distribution System", ``Multi-flip Networks:
-Parallelizing GenSAT", ``Self-determinations of Man".
+Attacking an under-sampled/over-sampled network with the gradient of the balanced network did not show to be as effective as using the same model's gradient. The average accuracy of an under-sampled model attack with adversaries generated from a different network was 53.8\% while the same metric was 25.8\% for the same model attack. Even that our training samples are within the same data domain, there are still huge differences on the gradients learned from the network. 
 
-\subsubsection{Lemmas, Propositions, and Theorems.}
-
-The numbers accorded to lemmas, propositions, and theorems, etc. should
-appear in consecutive order, starting with Lemma 1, and not, for
-example, with Lemma 11.
-
-\subsection{Figures}
-
-For \LaTeX\ users, we recommend using the \emph{graphics} or \emph{graphicx}
-package and the \verb+\includegraphics+ command.
-
-Please check that the lines in line drawings are not
-interrupted and are of a constant width. Grids and details within the
-figures must be clearly legible and may not be written one on top of
-the other. Line drawings should have a resolution of at least 800 dpi
-(preferably 1200 dpi). The lettering in figures should have a height of
-2~mm (10-point type). Figures should be numbered and should have a
-caption which should always be positioned \emph{under} the figures, in
-contrast to the caption belonging to a table, which should always appear
-\emph{above} the table; this is simply achieved as matter of sequence in
-your source.
-
-Please center the figures or your tabular material by using the \verb+\centering+
-declaration. Short captions are centered by default between the margins
-and typeset in 9-point type (Fig.~\ref{fig:example} shows an example).
-The distance between text and figure is preset to be about 8~mm, the
-distance between figure and caption about 6~mm.
-
-To ensure that the reproduction of your illustrations is of a reasonable
-quality, we advise against the use of shading. The contrast should be as
-pronounced as possible.
-
-If screenshots are necessary, please make sure that you are happy with
-the print quality before you send the files.
 \begin{figure}
-\centering
-\includegraphics[height=6.2cm]{eijkel2}
-\caption{One kernel at $x_s$ (\emph{dotted kernel}) or two kernels at
-$x_i$ and $x_j$ (\textit{left and right}) lead to the same summed estimate
-at $x_s$. This shows a figure consisting of different types of
-lines. Elements of the figure described in the caption should be set in
-italics, in parentheses, as shown in this sample caption.}
-\label{fig:example}
+	\label{fig7} 
+	\begin{minipage}[b]{0.4\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{cat_undersampling_per.png} 
+	\end{minipage}%%
+	\begin{minipage}[b]{0.4\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{cat_oversampling_per.png} 
+	\end{minipage} 
+	\begin{minipage}[b]{0.4\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{dog_undersampling_per.png} 
+	\end{minipage}%% 
+	\begin{minipage}[b]{0.4\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{dog_oversampling_per.png} 
+	\end{minipage} 
+	\centering
+	\caption{Top left and right: cat under-sampling / over-sampling with perturbation. Bottom left and right: dog under-sampling / over-sampling with perturbation}
+	\label{fig:overlap}
 \end{figure}
 
-Please define figures (and tables) as floating objects. Please avoid
-using optional location parameters like ``\verb+[h]+" for ``here".
+\subsection{Overlapping distributions}
+When classes in the dataset already have distributions that are very close to one another the effects of adversaries seems to be even stronger. Figure~\ref{fig:conf_matrix_full} shows that for the pairs cat and dog and automobile and truck, misclassification naturally happens towards one another due to similarities in their feature space. On this case, our experiment shows that the adversarial attacks intensifies this property by increasing the number on which one class is picked over another. Figure~\ref{fig:overlap} shows that both cat and dogs are increasingly misclassified between themselves when imbalanced datasets on both classes are used. While on the cat under-sampling case 40\% of the samples were misclassified as dogs, on the oversampling 39\% of the dogs were misclassified as cats. This results gives interesting insights, as it shows that the gradient sign is navigating around the target class distribution and when an overlap occurs it becomes easier to create an adversarial to the class with higher similarities.
 
-\paragraph{Remark 1.}
 
-In the printed volumes, illustrations are generally black and white
-(halftones), and only in exceptional cases, and if the author is
-prepared to cover the extra cost for color reproduction, are colored
-pictures accepted. Colored pictures are welcome in the electronic
-version free of charge. If you send colored figures that are to be
-printed in black and white, please make sure that they really are
-legible in black and white. Some colors as well as the contrast of
-converted colors show up very poorly when printed in black and white.
+\section{Conclusion}
 
-\subsection{Formulas}
+This work sheds an important light on machine learning methods. Several real-life models are deeply concerned with possible vulnerabilities of their models, and studies on this field were being done for the past 20 years. Still, the imbalance learning problem remains one of the big questions in artificial intelligence. Adversarial attacks are one more concern for those working with such systems, but could also be seen as a tool that could forcibly make a model to stretch its occupation over the data domain space when we add adversaries to our training set \cite{goodfellow2016}. Every new threat to predictive techniques is also a new improvement over model generalisation capabilities as the creation of the former could be used to improve the latter. Imbalanced datasets can be seen as one way of understanding adversarial attacks, as the lack of knowledge on a specific label seems to increase models vulnerabilities to such attacks
 
-Displayed equations or formulas are centered and set on a separate
-line (with an extra line or halfline space above and below). Displayed
-expressions should be numbered for reference. The numbers should be
-consecutive within each section or within the contribution,
-with numbers enclosed in parentheses and set on the right margin --
-which is the default if you use the \emph{equation} environment, e.g.,
-\begin{equation}
-  \psi (u) = \int_{o}^{T} \left[\frac{1}{2}
-  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .
-\end{equation}
+\section{Future Work}
+Deep Neural Nets are seen by most people as black-box models as it is really hard to reason about what the model is actually learning. Tools like adversarial methods helps to extract insights from such methods and should be explored further. This work has performed tests on a dataset with a small number of classes, and in the future, datasets like ImageNet could be used to confirm our insights or discover new ones. The excessive amount of parameters in DNNs do not shield them from one of the most common effects in machine learning models - the domain shift caused by unseen data points. We strongly believe that the studies of adversaries could greatly help the understanding of the boundaries of such models.
 
-Equations should be punctuated in the same way as ordinary
-text but with a small space before the end punctuation mark.
-
-\subsection{Footnotes}
-
-The superscript numeral used to refer to a footnote appears in the text
-either directly after the word to be discussed or -- in relation to a
-phrase or a sentence -- following the punctuation sign (comma,
-semicolon, or period). Footnotes should appear at the bottom of
-the
-normal text area, with a line of about 2~cm set
-immediately above them.\footnote{The footnote numeral is set flush left
-and the text follows with the usual word spacing.}
-
-\subsection{Program Code}
-
-Program listings or program commands in the text are normally set in
-typewriter font, e.g., CMTT10 or Courier.
-
-\medskip
-
-\noindent
-{\it Example of a Computer Program}
-\begin{verbatim}
-program Inflation (Output)
-  {Assuming annual inflation rates of 7%, 8%, and 10%,...
-   years};
-   const
-     MaxYears = 10;
-   var
-     Year: 0..MaxYears;
-     Factor1, Factor2, Factor3: Real;
-   begin
-     Year := 0;
-     Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
-     WriteLn('Year  7% 8% 10%'); WriteLn;
-     repeat
-       Year := Year + 1;
-       Factor1 := Factor1 * 1.07;
-       Factor2 := Factor2 * 1.08;
-       Factor3 := Factor3 * 1.10;
-       WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
-     until Year = MaxYears
-end.
-\end{verbatim}
-%
-\noindent
-{\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
-report. Springer, New York)}
-
-\subsection{Citations}
-
-For citations in the text please use
-square brackets and consecutive numbers: \cite{jour}, \cite{lncschap},
-\cite{proceeding1} -- provided automatically
-by \LaTeX 's \verb|\cite| \dots\verb|\bibitem| mechanism.
-
-\subsection{Page Numbering and Running Heads}
-
-There is no need to include page numbers. If your paper title is too
-long to serve as a running head, it will be shortened. Your suggestion
-as to how to shorten it would be most welcome.
-
-\section{LNCS Online}
-
-The online version of the volume will be available in LNCS Online.
-Members of institutes subscribing to the Lecture Notes in Computer
-Science series have access to all the pdfs of all the online
-publications. Non-subscribers can only read as far as the abstracts. If
-they try to go beyond this point, they are automatically asked, whether
-they would like to order the pdf, and are given instructions as to how
-to do so.
-
-Please note that, if your email address is given in your paper,
-it will also be included in the meta data of the online version.
-
-\section{BibTeX Entries}
-
-The correct BibTeX entries for the Lecture Notes in Computer Science
-volumes can be found at the following Website shortly after the
-publication of the book:
-\url{http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html}
-
-\subsubsection*{Acknowledgments.} The heading should be treated as a
-subsubsection heading and should not be assigned a number.
-
-\section{The References Section}\label{references}
-
-In order to permit cross referencing within LNCS-Online, and eventually
-between different publishers and their online databases, LNCS will,
-from now on, be standardizing the format of the references. This new
-feature will increase the visibility of publications and facilitate
-academic research considerably. Please base your references on the
-examples below. References that don't adhere to this style will be
-reformatted by Springer. You should therefore check your references
-thoroughly when you receive the final pdf of your paper.
-The reference section must be complete. You may not omit references.
-Instructions as to where to find a fuller version of the references are
-not permissible.
-
-We only accept references written using the latin alphabet. If the title
-of the book you are referring to is in Russian or Chinese, then please write
-(in Russian) or (in Chinese) at the end of the transcript or translation
-of the title.
-
-The following section shows a sample reference list with entries for
-journal articles \cite{jour}, an LNCS chapter \cite{lncschap}, a book
-\cite{book}, proceedings without editors \cite{proceeding1} and
-\cite{proceeding2}, as well as a URL \cite{url}.
-Please note that proceedings published in LNCS are not cited with their
-full titles, but with their acronyms!
 
 \bibliographystyle{splncs03} 
 \bibliography{refs}
-\section*{Appendix: Springer-Author Discount}
 
-LNCS authors are entitled to a 33.3\% discount off all Springer
-publications. Before placing an order, the author should send an email, 
-giving full details of his or her Springer publication,
-to \url{orders-HD-individuals@springer.com} to obtain a so-called token. This token is a
-number, which must be entered when placing an order via the Internet, in
-order to obtain the discount.
-
-\section{Checklist of Items to be Sent to Volume Editors}
-Here is a checklist of everything the volume editor requires from you:
-
-
-\begin{itemize}
-\settowidth{\leftmargin}{{\Large$\square$}}\advance\leftmargin\labelsep
-\itemsep8pt\relax
-\renewcommand\labelitemi{{\lower1.5pt\hbox{\Large$\square$}}}
-
-\item The final \LaTeX{} source files
-\item A final PDF file
-\item A copyright form, signed by one author on behalf of all of the
-authors of the paper.
-\item A readme giving the name and email address of the
-corresponding author.
-\end{itemize}
 \end{document}

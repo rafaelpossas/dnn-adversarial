@@ -1,16 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: typeinst.aux
 The style file: splncs03.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "jour"
-Warning--I didn't find a database entry for "lncschap"
-Warning--I didn't find a database entry for "proceeding1"
-Warning--I didn't find a database entry for "book"
-Warning--I didn't find a database entry for "proceeding2"
-Warning--I didn't find a database entry for "url"
 Warning--empty journal in bengiormsprop
 Warning--empty year in bengiormsprop
 Warning--empty journal in billovits
 Warning--empty note in stanford2016
 Warning--empty note in krizhevsky_2009
-Warning--empty booktitle in papernot_2017
-(There were 12 warnings)
+Warning--empty journal in murphey2004
+(There were 6 warnings)
