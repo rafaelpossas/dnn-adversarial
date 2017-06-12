@@ -21,6 +21,7 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Target class accuracy on all models\relax }}{32}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Individual class perturbed accuracy on the balanced model\relax }}{34}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Relative difference for each model. Higher numbers means more vulnerability\relax }}{36}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Top Left and Right: Cat undersampling / oversampling with perturbation. Bottom Left and Right: Dog undersampling / oversampling with perturbation\relax }}{37}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Dataset imbalance causes models to perform adjustments of decision boundaries leading to an increase on accuracy of the majority class and decrease on the minority class.\relax }}{35}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Relative difference for each model. Higher numbers means more vulnerability\relax }}{37}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Top Left and Right: Cat undersampling / oversampling with perturbation. Bottom Left and Right: Dog undersampling / oversampling with perturbation\relax }}{39}
 \addvspace {10\p@ }

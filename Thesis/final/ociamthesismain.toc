@@ -33,9 +33,9 @@
 \contentsline {section}{\numberline {5.6}Experiment goals}{32}
 \contentsline {chapter}{\numberline {6}Results}{33}
 \contentsline {section}{\numberline {6.1}Fully balanced model}{33}
-\contentsline {section}{\numberline {6.2}Class undersampling and oversampling}{34}
-\contentsline {section}{\numberline {6.3}Transfer Learning}{36}
-\contentsline {section}{\numberline {6.4}Overlapping distributions}{36}
-\contentsline {chapter}{\numberline {7}Conclusion}{39}
-\contentsline {section}{\numberline {7.1}Future Work}{40}
-\contentsline {chapter}{Bibliography}{41}
+\contentsline {section}{\numberline {6.2}Class under-sampling and over-sampling}{34}
+\contentsline {section}{\numberline {6.3}Transfer Learning}{37}
+\contentsline {section}{\numberline {6.4}Overlapping distributions}{38}
+\contentsline {chapter}{\numberline {7}Conclusion}{40}
+\contentsline {section}{\numberline {7.1}Future Work}{41}
+\contentsline {chapter}{Bibliography}{42}
