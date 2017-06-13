@@ -42,6 +42,31 @@ N.~Papernot, P.~McDaniel, I.~Goodfellow, S.~Jha, Z.~Berkay~Celik, and A.~Swami,
   ``Practical black-box attacks against deep learning systems using adversarial
   examples,'' \emph{arXiv preprint arXiv:1602.02697}, 2016.
 
+\bibitem{japkowicz2002class}
+N.~Japkowicz and S.~Stephen, ``The class imbalance problem: A systematic
+  study,'' \emph{Intelligent data analysis}, vol.~6, no.~5, pp. 429--449, 2002.
+
+\bibitem{krawczyk2016learning}
+B.~Krawczyk, ``Learning from imbalanced data: open challenges and future
+  directions,'' \emph{Progress in Artificial Intelligence}, vol.~5, no.~4, pp.
+  221--232, 2016.
+
+\bibitem{lowd2005}
+\BIBentryALTinterwordspacing
+D.~Lowd and C.~Meek, ``Adversarial learning,'' in \emph{Proceedings of the
+  Eleventh ACM SIGKDD International Conference on Knowledge Discovery in Data
+  Mining}, ser. KDD '05.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY,
+  USA: ACM, 2005, pp. 641--647. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/1081870.1081950}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Laskov2010}
+\BIBentryALTinterwordspacing
+P.~Laskov and R.~Lippmann, ``Machine learning in adversarial environments,''
+  \emph{Machine Learning}, vol.~81, no.~2, pp. 115--119, 2010. [Online].
+  Available: \url{http://dx.doi.org/10.1007/s10994-010-5207-6}
+\BIBentrySTDinterwordspacing
+
 \bibitem{lawrence1997face}
 S.~Lawrence, C.~L. Giles, A.~C. Tsoi, and A.~D. Back, ``Face recognition: A
   convolutional neural-network approach,'' \emph{IEEE transactions on neural
@@ -62,14 +87,21 @@ J.~Yosinski, J.~Clune, Y.~Bengio, and H.~Lipson, ``How transferable are
   features in deep neural networks?'' in \emph{Advances in neural information
   processing systems}, 2014, pp. 3320--3328.
 
-\bibitem{japkowicz2002class}
-N.~Japkowicz and S.~Stephen, ``The class imbalance problem: A systematic
-  study,'' \emph{Intelligent data analysis}, vol.~6, no.~5, pp. 429--449, 2002.
+\bibitem{he2008adasyn}
+H.~He, Y.~Bai, E.~A. Garcia, and S.~Li, ``Adasyn: Adaptive synthetic sampling
+  approach for imbalanced learning,'' in \emph{Neural Networks, 2008. IJCNN
+  2008.(IEEE World Congress on Computational Intelligence). IEEE International
+  Joint Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2008, pp.
+  1322--1328.
 
-\bibitem{krawczyk2016learning}
-B.~Krawczyk, ``Learning from imbalanced data: open challenges and future
-  directions,'' \emph{Progress in Artificial Intelligence}, vol.~5, no.~4, pp.
-  221--232, 2016.
+\bibitem{Barua2011}
+\BIBentryALTinterwordspacing
+S.~Barua, M.~M. Islam, and K.~Murase, \emph{A Novel Synthetic Minority
+  Oversampling Technique for Imbalanced Data Set Learning}.\hskip 1em plus
+  0.5em minus 0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2011,
+  pp. 735--744. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/978-3-642-24958-7_85}
+\BIBentrySTDinterwordspacing
 
 \bibitem{deng2009imagenet}
 J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei, ``Imagenet: A
