@@ -21,10 +21,14 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{lawrence1997face}
-S.~Lawrence, C.~L. Giles, A.~C. Tsoi, and A.~D. Back, ``Face recognition: A
-  convolutional neural-network approach,'' \emph{IEEE transactions on neural
-  networks}, vol.~8, no.~1, pp. 98--113, 1997.
+\bibitem{billovits}
+C.~Billovits, M.~Eric, and N.~Agarwala, ``Hitting depth: Investigating
+  robustness to adversarial examples in deep convolutional neural networks,''
+  2016.
+
+\bibitem{goodfellow2014}
+I.~J. Goodfellow, J.~Shlens, and C.~Szegedy, ``Explaining and harnessing
+  adversarial examples,'' \emph{arXiv preprint arXiv:1412.6572}, 2014.
 
 \bibitem{goodfellow2016}
 \BIBentryALTinterwordspacing
@@ -33,29 +37,25 @@ A.~Kurakin, I.~Goodfellow, and S.~Bengio, ``Adversarial examples in the
   \url{http://arxiv.org/abs/1607.02533}
 \BIBentrySTDinterwordspacing
 
+\bibitem{papernot2016}
+N.~Papernot, P.~McDaniel, I.~Goodfellow, S.~Jha, Z.~Berkay~Celik, and A.~Swami,
+  ``Practical black-box attacks against deep learning systems using adversarial
+  examples,'' \emph{arXiv preprint arXiv:1602.02697}, 2016.
+
+\bibitem{lawrence1997face}
+S.~Lawrence, C.~L. Giles, A.~C. Tsoi, and A.~D. Back, ``Face recognition: A
+  convolutional neural-network approach,'' \emph{IEEE transactions on neural
+  networks}, vol.~8, no.~1, pp. 98--113, 1997.
+
 \bibitem{papernot2016transf}
 N.~Papernot, P.~McDaniel, and I.~Goodfellow, ``Transferability in machine
   learning: from phenomena to black-box attacks using adversarial samples,''
   \emph{arXiv preprint arXiv:1605.07277}, 2016.
 
-\bibitem{goodfellow2014}
-I.~J. Goodfellow, J.~Shlens, and C.~Szegedy, ``Explaining and harnessing
-  adversarial examples,'' \emph{arXiv preprint arXiv:1412.6572}, 2014.
-
 \bibitem{szegedy2013}
 C.~Szegedy, W.~Zaremba, I.~Sutskever, J.~Bruna, D.~Erhan, I.~Goodfellow, and
   R.~Fergus, ``Intriguing properties of neural networks,'' \emph{arXiv preprint
   arXiv:1312.6199}, 2013.
-
-\bibitem{billovits}
-C.~Billovits, M.~Eric, and N.~Agarwala, ``Hitting depth: Investigating
-  robustness to adversarial examples in deep convolutional neural networks,''
-  2016.
-
-\bibitem{papernot2016}
-N.~Papernot, P.~McDaniel, I.~Goodfellow, S.~Jha, Z.~Berkay~Celik, and A.~Swami,
-  ``Practical black-box attacks against deep learning systems using adversarial
-  examples,'' \emph{arXiv preprint arXiv:1602.02697}, 2016.
 
 \bibitem{yosinski2014transferable}
 J.~Yosinski, J.~Clune, Y.~Bengio, and H.~Lipson, ``How transferable are
