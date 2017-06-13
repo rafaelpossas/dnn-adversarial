@@ -33,8 +33,8 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Effectiveness of adversarial examples on class-imbalanced Convolutional Neural Networks}
-\titlerunning{Imbalanced Learning and Adversarial Examples}
+\title{Effectiveness of adversarial learning on class-imbalanced convolutional neural networks}
+\titlerunning{Imbalanced and adversarial learning}
 % a short form should be given in case it is too long for the running head
 
 % the name(s) of the author(s) follow(s) next
@@ -45,12 +45,12 @@
 %
 \author{Rafael Possas, Ying Zhou}
 %
-\authorrunning{Imbalanced Learning and Adversarial Examples}
+\authorrunning{Imbalanced and adversarial learning}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{University Of Sydney, Camperdown, NSW \\
+\institute{School of Information Technologies, University Of Sydney, Camperdown, NSW \\
 \mailsa\\
 \url{https://sydney.edu.au}}
 
@@ -67,40 +67,39 @@
 
 
 \begin{abstract}
-A considerable amount of literature was published on the performance of Convolutional Neural Networks and the field has evolved considerably in the last years. However, as most machine learning methods, these networks suffer from the data imbalance problem - when the underlying training dataset is comprised of unequal number of samples for each label/class. Such difference naturally causes a phenomenon known as domain shift, which can be explained by the low generalisation capabilities of a model when presented with previously unseen data. Recent research have focused on a technique called Gradient Sign that forces domain shift on deep networks by creating adversarial examples. These are usually comprised of small directed changes on original data points that causes inputs to be misclassified by the predictive algorithm. Recent developments in such methods have heightened the need for better understanding of this phenomena. This study focuses on an experimental approach that sheds light on the link between the imbalanced learning problem and adversarial examples. Through a series of experiments we evaluated the gradient sign methods on imbalanced datasets linking their effectiveness with the underlying data distribution of image recognition models.
-\keywords{convolutional neural networks, adversarial examples, gradient sign, imbalanced training}
+A considerable amount of literature was published on the performance of convolutional neural networks  and the field has evolved considerably in the last years. However, as most machine learning methods, these networks suffer from the data imbalance problem - when the underlying training dataset is comprised of unequal number of samples for each label/class. Such difference naturally causes a phenomenon known as domain shift, which can be explained by the low generalisation capabilities of a model when presented with previously unseen data. Recent research have focused on a technique called gradient sign that forces domain shift on deep networks by creating adversarial examples. These are usually comprised of small directed changes on original data points that causes inputs to be misclassified by the predictive algorithm. Recent developments in such methods have heightened the need for better understanding of this phenomena. This study focuses on an experimental approach that sheds light on the link between the imbalanced learning problem and adversarial examples. Through a series of experiments we evaluated the gradient sign methods on imbalanced datasets linking their effectiveness with the underlying data distribution of image recognition models.
+\keywords{convolutional neural networks, adversarial learning, gradient sign, imbalanced training}
 \end{abstract}
 
 
 \section{Introduction}
 
-To date, little evidence has been found associating training data characteristics of a model with its robustness to adversarial examples. Experimental demonstrations of adversarial effects were carried out mainly by \cite{billovits}, \cite{goodfellow2014}, \cite{goodfellow2016}, \cite{papernot2016}. The motivation for Adversarial robustness comes largely from being able to shield image recognition systems from behaving unexpectedly. Previous published studies are limited to showing the general effectiveness of adversarial methods rather then understanding the deep relationship with the underlying training data distribution.
+Recent work has shown that the generalisation capabilities of convolutional neural networks \cite{lawrence1997face} is rather sparse \cite{goodfellow2016}, \cite{papernot2016transf}. Thus, there is an opportunity for methods to exploit empty pockets of space and, hence, systematically create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion. This can be done by adding just enough intentional noise to each pixel of the image so as to fool an algorithm into thinking that the image has an incorrect label \cite{goodfellow2014}, \cite{goodfellow2016}, \cite{papernot2016transf}, \cite{szegedy2013}.
 
-This work presents a practical approach for evaluation of gradient sign methods on datasets with skewed distributions. The main contributions of this work are as follows:
+The gradient sign method developed by Goodfellow et al. (2014) has been used as the foundation of many of the experiments in adversarial crafting on CNNs. The results have shown that the model can possibly have linear behavior in very high dimensional spaces.  Most inputs were miss-classified not only by Goodfellow et. al \cite{goodfellow2014}  experiments but many others \cite{billovits},\cite{goodfellow2016},\cite{papernot2016}.
+
+Developing robustness to adversarial examples has already been approached as academic work \cite{billovits}, recent research has shown that one can use transfer learning to perform black-box attacks against CNNs \cite{yosinski2014transferable} , \cite{papernot2016} .The combination of adversaries and transfer learning creates a threat vector for many state of the art methods. Attacks can, however, depend on some specific internal information of the target model \cite{papernot2016transf}. As most recent applied methods depend on the network gradient information, there is a straight dependence on the network confidence per class label and the robustness of the model to adversarial attacks.
+
+Imbalanced learning is a well known cause for lower performance of several machine learning algorithms \cite{japkowicz2002class}, \cite{krawczyk2016learning}. Data distribution on real world is often skewed and rarely contains enough information to learn all the required features of the data domain. Adversaries are proven to explore class distributions vicinities, and the question whether imbalanced training sets affects their effectiveness is still unanswered.
+
+To date, little evidence has been found associating training data characteristics of a model with its robustness to adversarial learning. Experimental demonstrations of adversarial effects were carried out mainly by \cite{billovits}, \cite{goodfellow2014}, \cite{goodfellow2016}, \cite{papernot2016}. The motivation for adversarial robustness comes largely from being able to shield image recognition systems from behaving unexpectedly. Previous published studies are limited to showing the general effectiveness of adversarial methods rather than understanding the deep relationship with the underlying training data distribution.
+
+This work presents a practical approach for evaluation of gradient sign methods on datasets with skewed distributions. The main contributions are as follows:
 \begin{enumerate}
 \item Understanding of the relationship between the gradients learned on an image recognition model and its vulnerability to gradient sign methods
 \item Evaluation of the resilience of imbalanced CNNs to adversarial attacks using same model knowledge and transfer learning from different models.
 \item Investigation of classes with similar distributions and their relationship to both adversarial attacks and imbalanced learning problem.
 \end{enumerate}
 
-Section 2 of this paper discusses the related work in both convolutional neural networks and gradient sign methods. Section 3 provides details of the training models, imbalanced datasets and gradient sign methods used in our experiments. Section 4 presents the results on the under-sampled, over-sampled and balanced cases using both same/different model gradient. Sections 5 and 6 are dedicated to drawing conclusions and providing directions to related future work.
+Section 1 of this paper discusses the related work in both convolutional neural networks and gradient sign methods. Section 2 provides details of the training models, imbalanced datasets and gradient sign methods used in our experiments. Section 3 presents the results on the under-sampled, over-sampled and balanced cases using both same/different model gradient. Sections 4 and 5 are dedicated to drawing conclusions and providing directions to related future work.
 
 
-\section{Related Work}
+\section{Methodology}
 
-Recent work has shown that the generalisation capabilities of deep networks is rather sparse \cite{goodfellow2016}, \cite{papernot2016transf}. Thus, there is an opportunity for methods to exploit empty pockets of space and, hence, systematically create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion. This can be done by adding just enough intentional noise to each pixel of the image so as to fool an algorithm into thinking that the image has an incorrect label \cite{goodfellow2014}, \cite{goodfellow2016}, \cite{papernot2016transf}, \cite{szegedy2013}.
+Our experiments were aimed into understanding the relationships of the underlying learning structure of CNNs and the perturbation caused by gradient sign methods. Class labels would need to be different enough so we can make better assumptions of their distributions. For instance, datasets with higher level categories (e.g. amphibian, animal etc) organized hierarchically could add a degree of complexity to our experiments that would hinder the analysis of the aforementioned relationship. We focus into the investigation of how the gradient step from the sign method moves the points away from their distributions, and how this could be affected by both balanced and skewed distributions.
 
-The Gradient Sign method developed by Goodfellow et al. (2014) has been used as the foundation of many of the experiments in adversarial crafting on CNNs. The results have shown that the model can possibly have linear behavior in very high dimensional spaces.  Most inputs were miss-classified not only by Goodfellow et. al \cite{goodfellow2014}  experiments but many others \cite{billovits},\cite{goodfellow2016},\cite{papernot2016}.
-
-Developing robustness to adversarial examples has already been approached as academic work \cite{billovits}, recent research has shown that one can use transfer learning to perform black-box attacks against Deep Neural Networks \cite{yosinski2014transferable} , \cite{papernot2016} .The combination of adversaries and transfer learning creates a threat vector for many state of the art methods. Attacks can, however, depend on some specific internal information of the target model \cite{papernot2016transf}. As most recent applied methods depend on the network gradient information, there is a straight dependence on the network confidence per class label and the robustness of the model to adversarial attacks.
-
-Imbalanced learning is a well known cause for lower performance of several machine learning algorithms \cite{japkowicz2002class}, \cite{krawczyk2016learning}. Data distribution on real world is often skewed and rarely contains enough information to learn all the required features of the data domain. Adversaries are proven to explore class distributions vicinities, and the question whether imbalanced training sets affects their effectiveness is still unanswered.
-
-
-\section{Initial Setup}
-
-For the purposes of this work, we used a dataset that is not only visually rich but also enables analysis between different class labels. The 2014 ImageNet dataset \cite{deng2009imagenet} would be the natural choice, however, the amount of classes (1,000) would make it harder to perform comparisons. We use a dataset with similar characteristics, the CIFAR-10 \cite{krizhevsky_2009}. It contains 10 different class labels of 32x32 images, which enables us to easily train our algorithm from scratch and also to understand deeper relationships between labels.
-\subsection{Network Architecture and parameters}
+For the purposes of this work, we used a dataset that is not only visually rich but also enables analysis between different class labels. The 2014 ImageNet dataset \cite{deng2009imagenet} would be the natural choice, however, as mentioned above, our experiment needed cleanly separate classes while the hierarchical class structure of ImageNet would make it harder for us to draw conclusions from labels relationships. We use a dataset with similar characteristics, the CIFAR-10 \cite{krizhevsky_2009}. It contains 10 non-hierarchical class labels of 32x32 images, which enables us to easily train our algorithm from scratch and also to understand deeper relationships between labels.
+\subsection{Network architecture and parameters}
 
 All the experiments were done using the VGG architecture \cite{simonyan2014very}. The two FC-4096 layers at the end were replaced by one single layer with 512 neurons and RELU activations. In addition, the total number of convolutions blocks and pooling were reduced to 3, with the first layer having 2 stacked convolution layers followed by a max pooling of stride 2x2 and the last two layers with 3 stacked convolutions also followed by a max pooling of stride 2x2. We have used RMSProp  \cite{bengiormsprop} as the optimisation technique with a learning rate of $10^{-4}$ and the decay $10^{-5}$. Figure~\ref{fig:conf_matrix_full} shows the results of our models on the CIFAR10 original dataset.
 
@@ -123,9 +122,9 @@ As the CIFAR10 dataset is not naturally imbalanced, we have artificially created
 
 
 
-\subsection{Gradient Sign methods}
+\subsection{Gradient sign methods}
 
-The Gradient Sign is a method that uses internal gradient information so as to create directed perturbation to test data. Whether one adds or subtract noise according to equations 1 and 2, the resulting label will have different meanings. Suppose the current true label of the class is selected as a gradient candidate, adding noise would mean that we increase the cost function of our input while subtracting noise is the same as minimizing our loss even further. These approaches will from now on be referred as ascent and descent methods. Perturbations could also be applied by two different variations of the gradient sign \cite{goodfellow2014}. While the Fast Gradient Sign applies a single perturbation to the input, the Iterative Gradient Sign performs the same perturbation a chosen number of times iteratively. Figure~\ref{fig:fgsm_craft} shows an example of adversarial created using the fast method.
+The gradient sign is a method that uses internal gradient information so as to create directed perturbation to test data. Whether one adds or subtract noise according to equations 1 and 2, the resulting label will have different meanings. Suppose the current true label of the class is selected as a gradient candidate, adding noise would mean that we increase the cost function of our input while subtracting noise is the same as minimizing our loss even further \cite{goodfellow2016_book}. These approaches will from now on be referred as ascent and descent methods. Perturbations could also be applied by two different variations of the gradient sign \cite{goodfellow2014}. While the Fast Gradient Sign applies a single perturbation to the input, the Iterative Gradient Sign performs the same perturbation a chosen number of times iteratively. Figure~\ref{fig:fgsm_craft} shows an example of adversarial created using the fast method.
 
 
 \begin{equation}
@@ -140,7 +139,6 @@ C(x + \delta)\approx C(x) - \epsilon * sign(\nabla C)
 	\caption{Adversarial example crafting with fast gradient sign \cite{goodfellow2014}.}
 	\label{fig:fgsm_craft}
 \end{figure}
-\subsection{Backpropagated Class Gradient}
 
 The choice of the backpropagated class gradient has direct influence on the generated adversary. In order to reduce the variability of our experiment, we have chosen the true sample label as the backpropagated gradient coupled with the ascent method. The intuition behind this choice is that we look to increase the cost function of the target class by moving away from the current true label. Moreover, in order to test our networks, we needed an $\epsilon$ value that would not only keep the image meaning understandable to human perception but also provide only the minimum amount of perturbation so as to push most of the samples to the closest vicinity leading to a successful misclassification. From all the trials performed, the value of $\epsilon$ that seemed to fulfil our needs was 0.01. 
 
@@ -206,7 +204,7 @@ Perturbation on the over-sampling case had a weaker effect, as the small push ca
 
 The increased number of samples of the over-sampled label causes the network to perform a trade-off when optimizing its loss function. For instance, the decision boundary would be chosen in order to minimize the total error of the network. The cost function is lower when the decision boundary minimizes the misclassification of the majority class as there is a higher number of samples. The choice of a biased decision boundary could be one of the factors explaining the higher resilience of over-sampled networks.
 
-\subsection{Transfer Learning}
+\subsection{Transfer learning}
 
 The use of a different model for creating adversaries has shown less effective when compared to the same model attack. As the overall gradient have not only different direction but also magnitudes, the attacked system has proven to be more robust. The experiment reveals that although Gradient Sign is quite effective for fooling networks it does require a good amount of knowledge from the underlying training parameters so as to unleash its full potential. 
 \begin{figure}
@@ -240,15 +238,14 @@ Attacking an under-sampled/over-sampled network with the gradient of the balance
 When classes in the dataset already have distributions that are very similar to one another the effects of adversaries seems to be even stronger. Figure~\ref{fig:conf_matrix_full} shows that for the pairs cat/dog and automobile/truck, misclassification naturally happens towards one another due to similarities in their feature space. On this case, our experiment shows that the adversarial attacks intensifies this phenomenon by increasing the number of times on which one class is picked over another. Figure~\ref{fig:overlap} shows that both cat and dogs are increasingly misclassified between themselves when under-sampled datasets on both classes are used. While on the cat under-sampling case 40\% of the samples were misclassified as dogs, on the oversampling 39\% of the dogs were misclassified as cats. This results gives interesting insights, as it shows that the gradient sign is navigating around the target class distribution and when an overlap occurs it becomes easier to create an adversarial to the class with higher similarities.
 
 
-\section{Conclusion}
+\section{Conclusion and future work}
 
 This work sheds an important light on machine learning methods. Several real-life models are deeply concerned with possible vulnerabilities of their models, and studies on this field were being done for the past 20 years. Still, the imbalance learning problem remains one of the big questions in machine learning. Adversarial attacks are one more concern for those working with such systems, but they could also be seen as a tool that could forcibly make a model to stretch its occupation over the data domain space when we add adversaries to our training set \cite{goodfellow2016}. Every new threat to predictive techniques is also a new improvement over model generalisation capabilities as the creation of the former could be used to improve the latter. Imbalanced datasets can be seen as one way of understanding adversarial attacks, as the lack of knowledge on a specific label seems to increase models vulnerabilities to such attacks
 
-\section{Future Work}
-Deep Neural Nets are seen by most people as black-box models as it is really hard to reason about what the model is actually learning. Tools like adversarial methods helps to extract insights from such methods and should be explored further. This work has performed tests on a dataset with a small number of classes, and in the future, datasets like ImageNet could be used to confirm our insights or discover new ones. The excessive amount of parameters in DNNs do not shield them from one of the most common effects in machine learning models - the domain shift caused by unseen data points. We strongly believe that the studies of adversaries could greatly help the understanding of the boundaries of such models.
+CNNs are seen by most people as black-box models as it is really hard to reason about what the model is actually learning. Tools like adversarial methods helps to extract insights from such methods and should be explored further. This work has performed tests on a dataset with a small number of classes, and in the future, datasets like ImageNet could be used to confirm our insights or discover new ones. The excessive amount of parameters in DNNs do not shield them from one of the most common effects in machine learning models - the domain shift caused by unseen data points. We strongly believe that the studies of adversaries could greatly help the understanding of the boundaries of such models.
 
 
-\bibliographystyle{splncs03} 
+\bibliographystyle{IEEEtran} 
 \bibliography{refs}
 
 \end{document}
