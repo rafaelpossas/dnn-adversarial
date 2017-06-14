@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex typeinst"] 1497341303 "typeinst.aux" "typeinst.bbl" "typeinst" 1497341303
+["bibtex typeinst"] 1497433048 "typeinst.aux" "typeinst.bbl" "typeinst" 1497433073
   "./IEEEtran.bst" 1497320850 57747 3d527d22adcaa16ca0abd0879d6fab1f ""
   "refs.bib" 1497341074 13475 519018c4bf24c8ca37972f064612a981 ""
-  "typeinst.aux" 1497341303 3999 14c668a287fd09f9bd4229c36776e8d4 ""
+  "typeinst.aux" 1497433073 3850 5b72dfba380003f5f104b0f0381ba925 ""
   "typeinst.bcf" 0 -1 0 ""
   (generated)
   "typeinst.bbl"
   "typeinst.blg"
-["pdflatex"] 1497341302 "typeinst.tex" "typeinst.pdf" "typeinst" 1497341302
+["pdflatex"] 1497433072 "typeinst.tex" "typeinst.pdf" "typeinst" 1497433073
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -37,7 +37,6 @@
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1248133631 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1248133631 29078 718ea4567ceff944262b0f5b0800e1d9 ""
@@ -79,17 +78,15 @@
   "cat_undersampling_per.png" 1497265378 45045 eb4b611247ef50bdfb56debf96546c93 ""
   "class_dist.png" 1497265378 449029 2df70af24779ef30d78fa64fa8e1e570 ""
   "conf_matrix.png" 1497265378 45043 51a1c005ecf849f114268a5962bd00c2 ""
-  "dog_oversampling_per.png" 1497265378 50457 6c8c4f62e6768863281cab04b35c05e2 ""
-  "dog_undersampling_per.png" 1497265378 46643 ed1b6f87398096e2bab8251fc8298348 ""
-  "graph_non_pert.png" 1497265378 183481 ec5057a4454329a42a0260824d66800b ""
+  "graph_non_pert.png" 1497432948 137810 6d00e0eadb6472808ac38f514402bee5 ""
   "llncs.cls" 1497265378 41702 c53aeb6af2981c2c13265ad1a8cffa80 ""
   "panda.png" 1497265378 124794 0962f3553a54bb93993df8d16c2d8aad ""
-  "rel_diff_graph.png" 1497265378 190985 56b782e01806cc5f41c4c1d2e96436fd ""
+  "rel_diff_graph.png" 1497432923 156947 fcf1f3fd1ef5840d07f8bfa2508c293a ""
   "remreset.sty" 1497265378 1096 6a75275ca00e32428c6f059d2f618ea7 ""
-  "typeinst.aux" 1497341224 4000 ab13d41cdbaecd212f956c0d58f00240 ""
-  "typeinst.bbl" 1497341224 5596 0540407413ffd73b33ad5b95f2599ff3 "bibtex typeinst"
-  "typeinst.tex" 1497341302 23751 bc2eff71b0b7b81f6f61e939cb7d5682 ""
+  "typeinst.aux" 1497433073 3850 5b72dfba380003f5f104b0f0381ba925 ""
+  "typeinst.bbl" 1497433048 5380 48d1fb074afc96e675a8b395a9f1eea5 "bibtex typeinst"
+  "typeinst.tex" 1497433072 23473 6db742c839eb47e394ff56f2d67a2069 ""
   (generated)
-  "typeinst.aux"
   "typeinst.log"
+  "typeinst.aux"
   "typeinst.pdf"

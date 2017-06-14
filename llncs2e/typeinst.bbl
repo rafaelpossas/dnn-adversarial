@@ -109,12 +109,6 @@ J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei, ``Imagenet: A
   Pattern Recognition, 2009. CVPR 2009. IEEE Conference on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2009, pp. 248--255.
 
-\bibitem{krizhevsky_2009}
-\BIBentryALTinterwordspacing
-A.~Krizhevsky, ``Cifar-10 and cifar-100 datasets,'' 2009. [Online]. Available:
-  \url{https://www.cs.toronto.edu/~kriz/cifar.html}
-\BIBentrySTDinterwordspacing
-
 \bibitem{simonyan2014very}
 K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
   large-scale image recognition,'' \emph{arXiv preprint arXiv:1409.1556}, 2014.

@@ -117,7 +117,7 @@ All the experiments were done using the VGG architecture \cite{simonyan2014very}
 As the CIFAR10 dataset is not naturally imbalanced, we have artificially created two variations on which we trained the imbalanced networks.  While one dataset consisted on a direct under-sample of the target class to 1,000 samples, the other was changed using  an oversampling of the target class(or an under-sampling of all other classes). We kept the number of samples for the target class at 5,000 while all other classes were reduced to 1,000 samples. For each class of the two different datasets configurations, a network was then trained until convergence using the same hyper-parameters as the balanced case. Each model was evaluated against a test set of 1,000 samples of the target class which was  perturbed by its own under/over-sampled model and the balanced model. Both imbalanced networks were separately tested for each class for both same model and different model adversaries. The same model test aims to investigate the vulnerability of class imbalance on adversarial examples while the different model test main goal is to verify the robustness on transfer learning environments. In total we evaluated 50 different combinations: 20 for each different imbalanced dataset (same model gradient and balanced network gradient) and 10 for the balanced network using its own gradients on each class. Figure~\ref{fig:acc_graph} shows the accuracy for the models without any perturbation.
 \begin{figure}
 	\centering
-	\includegraphics[height=5.5cm]{graph_non_pert.png}
+	\includegraphics[height=4.2cm]{graph_non_pert.png}
 	\caption{Target class accuracy on all models}
 	\label{fig:acc_graph}
 \end{figure}
@@ -150,7 +150,7 @@ We use the results of the balanced network on adversarial attacks as the baselin
 
 \begin{figure}
 	\centering
-	\includegraphics[height=5.5cm]{rel_diff_graph.png}
+	\includegraphics[height=4.2cm]{rel_diff_graph.png}
 	\caption{Relative difference for each model. Higher numbers means more vulnerability}
 	\label{fig:relative_difference}
 \end{figure}
@@ -210,15 +210,7 @@ The use of a different model for creating adversaries has shown less effective w
 	\begin{minipage}[b]{0.55\linewidth}
 		\centering
 		\includegraphics[width=1\linewidth]{cat_oversampling_per.png} 
-	\end{minipage} 
-	\begin{minipage}[b]{0.55\linewidth}
-		\centering
-		\includegraphics[width=1\linewidth]{dog_undersampling_per.png} 
-	\end{minipage}%% 
-	\begin{minipage}[b]{0.55\linewidth}
-		\centering
-		\includegraphics[width=1\linewidth]{dog_oversampling_per.png} 
-	\end{minipage} 
+	\end{minipage}
 	\centering
 	\caption{Top left and right: cat under-sampling / over-sampling with perturbation. Bottom left and right: dog under-sampling / over-sampling with perturbation}
 	\label{fig:overlap}
