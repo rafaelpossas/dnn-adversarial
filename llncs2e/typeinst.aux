@@ -3,6 +3,7 @@
 \citation{goodfellow2014}
 \citation{goodfellow2016}
 \citation{papernot2016}
+\citation{Quionero}
 \citation{japkowicz2002class}
 \citation{krawczyk2016learning}
 \citation{lowd2005}
@@ -12,8 +13,7 @@
 \@writefile{toc}{\contentsline {author}{Authors' Instructions}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \citation{lawrence1997face}
-\citation{goodfellow2016}
-\citation{papernot2016transf}
+\citation{billovits}
 \citation{goodfellow2014}
 \citation{goodfellow2016}
 \citation{papernot2016transf}
@@ -22,59 +22,62 @@
 \citation{billovits}
 \citation{goodfellow2016}
 \citation{papernot2016}
-\citation{billovits}
-\citation{papernot2016}
+\citation{papernot2016transf}
 \citation{yosinski2014transferable}
 \citation{lowd2005}
 \citation{papernot2016transf}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}}
 \citation{he2008adasyn}
 \citation{Barua2011}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}}
+\citation{billovits}
 \citation{deng2009imagenet}
 \citation{simonyan2014very}
 \citation{bengiormsprop}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Experiment design}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Network architecture and synthetic dataset imbalance}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{Network Architecture}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{Dataset imbalancing}{3}}
 \citation{goodfellow2016_book}
 \citation{goodfellow2014}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Results of our adapted VGG architecture on CIFAR-10 dataset}}{4}}
 \newlabel{fig:conf_matrix_full}{{1}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Target class accuracy on all models}}{4}}
-\newlabel{fig:acc_graph}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Gradient sign methods}{4}}
 \citation{goodfellow2014}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Gradient sign methods}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Target class accuracy on all models}}{5}}
+\newlabel{fig:acc_graph}{{2}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Adversarial example crafting with fast gradient sign \cite  {goodfellow2014}.}}{5}}
 \newlabel{fig:fgsm_craft}{{3}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Relative difference for each model. Higher numbers means more vulnerability}}{6}}
 \newlabel{fig:relative_difference}{{4}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Class under-sampling and over-sampling}{6}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Results for the two different sources of perturbations along with the two different imbalanced datasets}}{7}}
 \newlabel{tbl:results}{{1}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Dataset imbalance causes models to perform adjustments of decision boundaries leading to an increase on accuracy of the majority class and decrease on the minority class.}}{7}}
-\newlabel{fig:class_dist}{{5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Transfer learning and overlapping distributions}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Top left and right: cat under-sampling / over-sampling with perturbation. Bottom left and right: dog under-sampling / over-sampling with perturbation}}{8}}
-\newlabel{fig:overlap}{{6}{8}}
-\citation{goodfellow2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Transfer learning and overlapping distributions}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{Transfer learning}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Dataset imbalance causes models to perform adjustments of decision boundaries leading to an increase on accuracy of the majority class and decrease on the minority class.}}{8}}
+\newlabel{fig:class_dist}{{5}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{Overlapping distributions}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and future work}{8}}
 \bibstyle{IEEEtran}
 \bibdata{refs}
 \bibcite{billovits}{1}
 \bibcite{goodfellow2014}{2}
 \bibcite{goodfellow2016}{3}
 \bibcite{papernot2016}{4}
-\bibcite{japkowicz2002class}{5}
-\bibcite{krawczyk2016learning}{6}
-\bibcite{lowd2005}{7}
-\bibcite{Laskov2010}{8}
-\bibcite{lawrence1997face}{9}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and future work}{9}}
-\bibcite{papernot2016transf}{10}
-\bibcite{szegedy2013}{11}
-\bibcite{yosinski2014transferable}{12}
-\bibcite{he2008adasyn}{13}
-\bibcite{Barua2011}{14}
-\bibcite{deng2009imagenet}{15}
-\bibcite{simonyan2014very}{16}
-\bibcite{bengiormsprop}{17}
-\bibcite{goodfellow2016_book}{18}
+\bibcite{Quionero}{5}
+\bibcite{japkowicz2002class}{6}
+\bibcite{krawczyk2016learning}{7}
+\bibcite{lowd2005}{8}
+\bibcite{Laskov2010}{9}
+\bibcite{lawrence1997face}{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces From left to right: cat under-sampling / over-sampling with perturbation. Bottom left and right: dog under-sampling / over-sampling with perturbation}}{9}}
+\newlabel{fig:overlap}{{6}{9}}
+\bibcite{papernot2016transf}{11}
+\bibcite{szegedy2013}{12}
+\bibcite{yosinski2014transferable}{13}
+\bibcite{he2008adasyn}{14}
+\bibcite{Barua2011}{15}
+\bibcite{deng2009imagenet}{16}
+\bibcite{simonyan2014very}{17}
+\bibcite{bengiormsprop}{18}
+\bibcite{goodfellow2016_book}{19}

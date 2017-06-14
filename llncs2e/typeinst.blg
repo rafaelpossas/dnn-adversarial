@@ -1,14 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: typeinst.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: typeinst.aux
 The style file: IEEEtran.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: refs.bib
-Repeated entry---line 259 of file refs.bib
+Repeated entry---line 269 of file refs.bib
  : @inproceedings{lowd2005
  :                        ,
 I'm skipping whatever remains of this entry
@@ -18,45 +11,4 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in billovits
 
 Done.
-You've used 18 entries,
-            4087 wiz_defined-function locations,
-            929 strings with 10905 characters,
-and the built_in function-call counts, 12684 in all, are:
-= -- 1005
-> -- 323
-< -- 92
-+ -- 173
-- -- 58
-* -- 614
-:= -- 1945
-add.period$ -- 39
-call.type$ -- 18
-change.case$ -- 16
-chr.to.int$ -- 225
-cite$ -- 19
-duplicate$ -- 911
-empty$ -- 1034
-format.name$ -- 74
-if$ -- 2927
-int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 161
-newline$ -- 87
-num.names$ -- 18
-pop$ -- 399
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 2
-skip$ -- 965
-stack$ -- 0
-substring$ -- 540
-swap$ -- 708
-text.length$ -- 17
-text.prefix$ -- 0
-top$ -- 5
-type$ -- 18
-warning$ -- 1
-while$ -- 54
-width$ -- 20
-write$ -- 197
 (There was 1 error message)

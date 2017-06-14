@@ -42,6 +42,11 @@ N.~Papernot, P.~McDaniel, I.~Goodfellow, S.~Jha, Z.~Berkay~Celik, and A.~Swami,
   ``Practical black-box attacks against deep learning systems using adversarial
   examples,'' \emph{arXiv preprint arXiv:1602.02697}, 2016.
 
+\bibitem{Quionero}
+J.~Quionero-Candela, M.~Sugiyama, A.~Schwaighofer, and N.~D. Lawrence,
+  \emph{Dataset Shift in Machine Learning}.\hskip 1em plus 0.5em minus
+  0.4em\relax The MIT Press, 2009.
+
 \bibitem{japkowicz2002class}
 N.~Japkowicz and S.~Stephen, ``The class imbalance problem: A systematic
   study,'' \emph{Intelligent data analysis}, vol.~6, no.~5, pp. 429--449, 2002.
@@ -114,8 +119,9 @@ K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
   large-scale image recognition,'' \emph{arXiv preprint arXiv:1409.1556}, 2014.
 
 \bibitem{bengiormsprop}
-Y.~Bengio, ``Rmsprop and equilibrated adaptive learning rates for non-convex
-  optimization,'' \emph{arXiv preprint arXiv:1502.04390v1}, 2015.
+Y.~Dauphin, H.~de~Vries, and Y.~Bengio, ``Equilibrated adaptive learning rates
+  for non-convex optimization,'' in \emph{Advances in Neural Information
+  Processing Systems}, 2015, pp. 1504--1512.
 
 \bibitem{goodfellow2016_book}
 \BIBentryALTinterwordspacing
