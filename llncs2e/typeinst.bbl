@@ -77,6 +77,10 @@ S.~Lawrence, C.~L. Giles, A.~C. Tsoi, and A.~D. Back, ``Face recognition: A
   convolutional neural-network approach,'' \emph{IEEE transactions on neural
   networks}, vol.~8, no.~1, pp. 98--113, 1997.
 
+\bibitem{papernot_thesis_2016}
+N.~Papernot, ``On the integrity of deep learning systems in adversarial
+  settings,'' 2016.
+
 \bibitem{papernot2016transf}
 N.~Papernot, P.~McDaniel, and I.~Goodfellow, ``Transferability in machine
   learning: from phenomena to black-box attacks using adversarial samples,''
@@ -86,6 +90,13 @@ N.~Papernot, P.~McDaniel, and I.~Goodfellow, ``Transferability in machine
 C.~Szegedy, W.~Zaremba, I.~Sutskever, J.~Bruna, D.~Erhan, I.~Goodfellow, and
   R.~Fergus, ``Intriguing properties of neural networks,'' \emph{arXiv preprint
   arXiv:1312.6199}, 2013.
+
+\bibitem{papernot_2017}
+\BIBentryALTinterwordspacing
+N.~Papernot, ``Machine learning in adversarial settings,'' 2017. [Online].
+  Available:
+  \url{https://www.papernot.fr/files/16-mcdaniel-sp-machine-learning-in-adversarial-settings.pdf}
+\BIBentrySTDinterwordspacing
 
 \bibitem{yosinski2014transferable}
 J.~Yosinski, J.~Clune, Y.~Bengio, and H.~Lipson, ``How transferable are
