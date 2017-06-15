@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex typeinst"] 1497483405 "typeinst.aux" "typeinst.bbl" "typeinst" 1497484056
-  "./IEEEtran.bst" 1497320850 57747 3d527d22adcaa16ca0abd0879d6fab1f ""
-  "refs.bib" 1497483392 13893 3ff84d2dc7b18d8813551dde5a99bc35 ""
-  "typeinst.aux" 1497484052 4308 1d4f38eb64203d5a13d8832acc1204b9 ""
+["bibtex typeinst"] 1497507689 "typeinst.aux" "typeinst.bbl" "typeinst" 1497507692
+  "./splncs03.bst" 1497265378 31579 7e4aae135b616a24984ab85e5cbb8ac7 ""
+  "refs.bib" 1497506086 13893 3ff84d2dc7b18d8813551dde5a99bc35 ""
+  "typeinst.aux" 1497507692 4383 db23796a546cfe4d9a190889a55f6894 ""
   "typeinst.bcf" 0 -1 0 ""
   (generated)
   "typeinst.bbl"
   "typeinst.blg"
-["pdflatex"] 1497484051 "typeinst.tex" "typeinst.pdf" "typeinst" 1497484056
+["pdflatex"] 1497507690 "typeinst.tex" "typeinst.pdf" "typeinst" 1497507692
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -84,9 +84,9 @@
   "panda.png" 1497265378 124794 0962f3553a54bb93993df8d16c2d8aad ""
   "rel_diff_graph.png" 1497432923 156947 fcf1f3fd1ef5840d07f8bfa2508c293a ""
   "remreset.sty" 1497265378 1096 6a75275ca00e32428c6f059d2f618ea7 ""
-  "typeinst.aux" 1497484052 4308 1d4f38eb64203d5a13d8832acc1204b9 ""
-  "typeinst.bbl" 1497483405 6024 cd52a8a000993d70faba04da214367ff "bibtex typeinst"
-  "typeinst.tex" 1497484056 23704 025a384be162d30d074f394766855f30 ""
+  "typeinst.aux" 1497507692 4383 db23796a546cfe4d9a190889a55f6894 ""
+  "typeinst.bbl" 1497507689 4124 2d0dd83ac2112fc383568be869927e45 "bibtex typeinst"
+  "typeinst.tex" 1497507690 23916 1e45037450858c0bb809d8e475bc3d7d ""
   (generated)
   "typeinst.pdf"
   "typeinst.aux"
