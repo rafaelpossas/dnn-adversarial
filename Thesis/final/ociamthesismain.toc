@@ -24,18 +24,16 @@
 \contentsline {section}{\numberline {4.5}Unrecognizable Images}{22}
 \contentsline {section}{\numberline {4.6}Adversarials in the Physical World}{23}
 \contentsline {section}{\numberline {4.7}Defending Against Adversarial Attacks}{24}
-\contentsline {chapter}{\numberline {5}Experiment}{25}
+\contentsline {chapter}{\numberline {5}Experiment design}{25}
 \contentsline {section}{\numberline {5.1}Data domain}{25}
 \contentsline {section}{\numberline {5.2}The VGG Architecture}{26}
 \contentsline {section}{\numberline {5.3}Overall Training Process}{27}
 \contentsline {section}{\numberline {5.4}Perturbation method}{30}
-\contentsline {section}{\numberline {5.5}Synthetic data level imbalance}{31}
-\contentsline {section}{\numberline {5.6}Experiment goals}{32}
+\contentsline {section}{\numberline {5.5}Synthetic data imbalance}{31}
 \contentsline {chapter}{\numberline {6}Results}{33}
-\contentsline {section}{\numberline {6.1}Fully balanced model}{33}
-\contentsline {section}{\numberline {6.2}Class under-sampling and over-sampling}{34}
-\contentsline {section}{\numberline {6.3}Transfer Learning}{37}
+\contentsline {section}{\numberline {6.1}Baseline model}{33}
+\contentsline {section}{\numberline {6.2}Under-sampling and over-sampling models}{34}
+\contentsline {section}{\numberline {6.3}Transfer learning}{37}
 \contentsline {section}{\numberline {6.4}Overlapping distributions}{38}
-\contentsline {chapter}{\numberline {7}Conclusion}{40}
-\contentsline {section}{\numberline {7.1}Future Work}{41}
-\contentsline {chapter}{Bibliography}{42}
+\contentsline {chapter}{\numberline {7}Conclusions and Future work}{39}
+\contentsline {chapter}{Bibliography}{41}
