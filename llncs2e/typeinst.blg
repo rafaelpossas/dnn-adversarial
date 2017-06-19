@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: typeinst.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: typeinst.aux
 The style file: splncs03.bst
 Database file #1: refs.bib
 Warning--entry type for "papernot_thesis_2016" isn't style-file defined
@@ -12,45 +10,4 @@ I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Barua2011
 Warning--empty journal in billovits
 Warning--empty note in krizhevsky_2009
-You've used 20 entries,
-            2785 wiz_defined-function locations,
-            701 strings with 8304 characters,
-and the built_in function-call counts, 10686 in all, are:
-= -- 887
-> -- 350
-< -- 14
-+ -- 146
-- -- 124
-* -- 673
-:= -- 1400
-add.period$ -- 24
-call.type$ -- 20
-change.case$ -- 130
-chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 927
-empty$ -- 937
-format.name$ -- 140
-if$ -- 2312
-int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 192
-newline$ -- 65
-num.names$ -- 40
-pop$ -- 367
-preamble$ -- 1
-purify$ -- 102
-quote$ -- 0
-skip$ -- 297
-stack$ -- 0
-substring$ -- 601
-swap$ -- 494
-text.length$ -- 14
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 76
-warning$ -- 3
-while$ -- 90
-width$ -- 22
-write$ -- 195
 (There was 1 error message)

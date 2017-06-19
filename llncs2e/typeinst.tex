@@ -83,11 +83,11 @@ The effectiveness of an adversarial attack is also dependent on the internal gra
 
 Currently, there is no empirical evidence on the effectiveness of adversarial inputs on class-imbalanced CNNs. We designed a set of experiments to investigate the effects of both training sets with skewed distributions and the model's internal gradient information on the robustness of these networks to such attacks. The main contributions of this work are as follows: 
 \begin{enumerate}
-\item Evaluation of the resilience of imbalanced CNNs to adversarial attacks using the white-box and black box approach.
-\item Investigation of classes with overlapping distributions and their relationship to both adversarial attacks and the imbalanced learning problem.
+	\item To shed new light on how CNNs trained on imbalanced datasets are affected by adversarial attacks
+	\item Evaluate the impact of transfer learning on imbalanced CNNs and how classes with similar set of features react to the perturbation caused by the gradient sign method
 \end{enumerate}
 
-Section 2 of this paper discusses the related work in both CNNs, gradient sign methods, adversarial attacks and imbalanced/transfer learning. Section 3 provides details of the training models, imbalanced datasets and gradient sign methods used in our experiments. Section 4 presents the results on the under-sampled, over-sampled and balanced cases using both same/different model gradient. Sections 5 is dedicated to drawing conclusions and providing directions to related future work.
+Section 2 of this paper discusses the related work in both CNNs, gradient sign methods, adversarial attacks and imbalanced/transfer learning. Section 3 provides details of the training models, imbalanced datasets and gradient sign methods used in our experiments. Section 4 presents the results on the under-sampled, over-sampled and balanced cases using both black/white-box attacks. Sections 5 is dedicated to drawing conclusions and providing directions to related future work.
 \section{Related work}
 
 
