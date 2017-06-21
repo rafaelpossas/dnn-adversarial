@@ -1,0 +1,43 @@
+\contentsline {chapter}{\tocchapter {Chapter}{}{Student Plagiarism: Compliance Statement}}{ii}{chapter*.2}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Abstract}}{iii}{chapter*.4}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Acknowledgements}}{iv}{chapter*.6}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{vii}{chapter*.6}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{ix}{chapter*.6}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}{chapter.1}
+\contentsline {section}{\tocsection {}{1.1}{Motivation}}{3}{section.1.1}
+\contentsline {section}{\tocsection {}{1.2}{Thesis Structure}}{3}{section.1.2}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Background}}{4}{chapter.2}
+\contentsline {section}{\tocsection {}{2.1}{ (Shallow) Neural Networks}}{4}{section.2.1}
+\contentsline {section}{\tocsection {}{2.2}{Gradient methods and backpropagation}}{5}{section.2.2}
+\contentsline {section}{\tocsection {}{2.3}{Convolutional neural networks}}{7}{section.2.3}
+\contentsline {section}{\tocsection {}{2.4}{CNNs feature learning and visualization}}{8}{section.2.4}
+\contentsline {section}{\tocsection {}{2.5}{CNNs Architectures}}{10}{section.2.5}
+\contentsline {section}{\tocsection {}{2.6}{CNNs properties}}{11}{section.2.6}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Adversarial attacks, imbalanced learning and domain shift}}{13}{chapter.3}
+\contentsline {section}{\tocsection {}{3.1}{Why adversaries exist?}}{13}{section.3.1}
+\contentsline {section}{\tocsection {}{3.2}{Learning from imbalanced data}}{14}{section.3.2}
+\contentsline {section}{\tocsection {}{3.3}{Domain shift}}{14}{section.3.3}
+\contentsline {section}{\tocsection {}{3.4}{Fast gradient sign method - FGSM}}{15}{section.3.4}
+\contentsline {section}{\tocsection {}{3.5}{Iterative gradient sign method - IGSM}}{16}{section.3.5}
+\contentsline {section}{\tocsection {}{3.6}{Ascent and descent perturbations}}{17}{section.3.6}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Attacking machine learning systems}}{19}{chapter.4}
+\contentsline {section}{\tocsection {}{4.1}{Transferability}}{19}{section.4.1}
+\contentsline {section}{\tocsection {}{4.2}{Intra-technique transferability}}{20}{section.4.2}
+\contentsline {section}{\tocsection {}{4.3}{Cross-technique transferability}}{20}{section.4.3}
+\contentsline {section}{\tocsection {}{4.4}{Black-box Attacks}}{21}{section.4.4}
+\contentsline {section}{\tocsection {}{4.5}{Unrecognizable Images}}{22}{section.4.5}
+\contentsline {section}{\tocsection {}{4.6}{Adversarials in the Physical World}}{22}{section.4.6}
+\contentsline {section}{\tocsection {}{4.7}{Defending Against Adversarial Attacks}}{24}{section.4.7}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Experiment design}}{25}{chapter.5}
+\contentsline {section}{\tocsection {}{5.1}{Data domain}}{25}{section.5.1}
+\contentsline {section}{\tocsection {}{5.2}{The VGG architecture}}{25}{section.5.2}
+\contentsline {section}{\tocsection {}{5.3}{Overall training process}}{27}{section.5.3}
+\contentsline {section}{\tocsection {}{5.4}{Perturbation method}}{29}{section.5.4}
+\contentsline {section}{\tocsection {}{5.5}{Synthetic data imbalance}}{30}{section.5.5}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Results}}{33}{chapter.6}
+\contentsline {section}{\tocsection {}{6.1}{Baseline model}}{33}{section.6.1}
+\contentsline {section}{\tocsection {}{6.2}{Under-sampling and over-sampling models}}{34}{section.6.2}
+\contentsline {section}{\tocsection {}{6.3}{Transfer learning}}{36}{section.6.3}
+\contentsline {section}{\tocsection {}{6.4}{Overlapping distributions}}{37}{section.6.4}
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Conclusions and Future work}}{39}{chapter.7}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{41}{chapter*.8}

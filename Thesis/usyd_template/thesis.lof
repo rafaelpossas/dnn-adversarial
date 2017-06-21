@@ -1,0 +1,32 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Multi-layer Perceptron}}{4}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Output change with regards to layer(s) weight change \citep {nielsen2016}}}{5}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gradient calculation representation \citep {nielsen2016}}}{6}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Shallow Neural Network vs Convolutional Neural Network}}{8}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces CNN layer visualization}}{9}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces (Left) Accuracy of Different CNN models (Right) Inference time for different batch sizes}}{10}{figure.2.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensional Representation of unexplored adversarial regions \citep {papernot_2017}}}{15}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Adversarial example crafting with fast gradient sign \citep {goodfellow2014}.}}{17}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Iterative FGSM Method \citep {goodfellow2016}.}}{17}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Visual Comparison of Gradients-based Methods \citep {goodfellow2016}.}}{18}{figure.3.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Knowledge transfer level using Intra-Technique Transferability \citep {papernot2016transf}}}{20}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Knowledge transfer using Cross-technique transferability and Ensemble methods \citep {papernot2016transf}}}{21}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Examples of noisy images classified with high confidence \citep {nguyen2015}.}}{23}{figure.4.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces VGG16 on ImageNet}}{26}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Results on the full dataset}}{28}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Individual class accuracy for under-sampled, over-sampled case on the CIFAR-10 modified dataset shows a decrease in accuracy for classes with lower number of samples}}{29}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Target class accuracy on all models}}{31}{figure.5.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Individual class perturbed accuracy on the balanced model}}{34}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Dataset imbalance causes models to perform adjustments of decision boundaries leading to an increase on accuracy of the majority class and decrease on the minority class.}}{35}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Relative difference for each model. Higher numbers means more vulnerability}}{36}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Under-sample on cat and truck increases misclassification to similar classes, while dog and automobile does not.}}{38}{figure.6.4}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

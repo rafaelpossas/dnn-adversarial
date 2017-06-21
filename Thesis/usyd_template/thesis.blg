@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: style/mybibstyle.bst
+Database file #1: refs.bib
+Warning--entry type for "papernot_thesis_2016" isn't style-file defined
+--line 218 of file refs.bib
+Repeated entry---line 363 of file refs.bib
+ : @inproceedings{zeiler2014visualizing
+ :                                     ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in billovits
+Warning--empty note in stanford2016
+Warning--empty note in krizhevsky_2009
+Warning--empty journal in murphey2004
+Warning--empty note in nielsen2016
+(There was 1 error message)

@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: ociamthesismain.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: ociamthesismain.aux
 A level-1 auxiliary file: dedication.aux
 A level-1 auxiliary file: acknowlegements.aux
 A level-1 auxiliary file: abstract.aux
@@ -11,8 +9,6 @@ A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
 A level-1 auxiliary file: conclusions.aux
-A level-1 auxiliary file: appendix1.aux
-A level-1 auxiliary file: appendix2.aux
 The style file: plain.bst
 Database file #1: refs.bib
 Warning--entry type for "papernot_thesis_2016" isn't style-file defined
@@ -30,45 +26,4 @@ Warning--empty note in krizhevsky_2009
 Warning--empty journal in murphey2004
 Warning--empty note in nielsen2016
 Warning--empty booktitle in papernot_2017
-You've used 31 entries,
-            2118 wiz_defined-function locations,
-            654 strings with 8909 characters,
-and the built_in function-call counts, 9926 in all, are:
-= -- 966
-> -- 514
-< -- 7
-+ -- 206
-- -- 172
-* -- 637
-:= -- 1682
-add.period$ -- 93
-call.type$ -- 31
-change.case$ -- 179
-chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 378
-empty$ -- 726
-format.name$ -- 172
-if$ -- 2054
-int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 25
-newline$ -- 154
-num.names$ -- 62
-pop$ -- 205
-preamble$ -- 1
-purify$ -- 148
-quote$ -- 0
-skip$ -- 289
-stack$ -- 0
-substring$ -- 491
-swap$ -- 88
-text.length$ -- 7
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 122
-warning$ -- 9
-while$ -- 90
-width$ -- 33
-write$ -- 314
 (There was 1 error message)

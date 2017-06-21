@@ -1,0 +1,198 @@
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\href}[2]{#2}
+
+\bibitem[{Bengio and Courville(2016)}]{goodfellow2016_book}
+Ian Goodfellow~Yoshua Bengio and Aaron Courville. 2016.
+\newblock \emph{Deep Learning}.
+\newblock MIT Press.
+
+\bibitem[{Billovits et~al.(2016)Billovits, Eric, and Agarwala}]{billovits}
+Chris Billovits, Mihail Eric, and Nipun Agarwala. 2016.
+\newblock Hitting depth: Investigating robustness to adversarial examples in
+  deep convolutional neural networks.
+
+\bibitem[{Bishop(1995)}]{bishop1995neural}
+Christopher~M Bishop. 1995.
+\newblock \emph{Neural networks for pattern recognition}.
+\newblock Oxford university press.
+
+\bibitem[{Canziani et~al.(2016)Canziani, Paszke, and
+  Culurciello}]{canziani2016analysis}
+Alfredo Canziani, Adam Paszke, and Eugenio Culurciello. 2016.
+\newblock An analysis of deep neural network models for practical applications.
+\newblock \emph{arXiv preprint arXiv:1605.07678}.
+
+\bibitem[{Dauphin et~al.(2015)Dauphin, de~Vries, and Bengio}]{bengiormsprop}
+Yann Dauphin, Harm de~Vries, and Yoshua Bengio. 2015.
+\newblock Equilibrated adaptive learning rates for non-convex optimization.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  1504--1512.
+
+\bibitem[{Deng et~al.(2009)Deng, Dong, Socher, Li, Li, and
+  Fei-Fei}]{deng2009imagenet}
+Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li~Fei-Fei. 2009.
+\newblock Imagenet: A large-scale hierarchical image database.
+\newblock In \emph{Computer Vision and Pattern Recognition, 2009. CVPR 2009.
+  IEEE Conference on}, pages 248--255. IEEE.
+
+\bibitem[{Goller and Kuchler(1996)}]{goller1996learning}
+Christoph Goller and Andreas Kuchler. 1996.
+\newblock Learning task-dependent distributed representations by
+  backpropagation through structure.
+\newblock In \emph{Neural Networks, 1996., IEEE International Conference on},
+  volume~1, pages 347--352. IEEE.
+
+\bibitem[{Goodfellow et~al.(2014)Goodfellow, Shlens, and
+  Szegedy}]{goodfellow2014}
+Ian~J Goodfellow, Jonathon Shlens, and Christian Szegedy. 2014.
+\newblock Explaining and harnessing adversarial examples.
+\newblock \emph{arXiv preprint arXiv:1412.6572}.
+
+\bibitem[{Gu and Rigazio(2014)}]{gu2014}
+Shixiang Gu and Luca Rigazio. 2014.
+\newblock Towards deep neural network architectures robust to adversarial
+  examples.
+\newblock \emph{arXiv preprint arXiv:1412.5068}.
+
+\bibitem[{Hinton et~al.(2012)Hinton, Srivastava, Krizhevsky, Sutskever, and
+  Salakhutdinov}]{hinton2012improving}
+Geoffrey~E Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and
+  Ruslan~R Salakhutdinov. 2012.
+\newblock Improving neural networks by preventing co-adaptation of feature
+  detectors.
+\newblock \emph{arXiv preprint arXiv:1207.0580}.
+
+\bibitem[{Hornik et~al.(1989)Hornik, Stinchcombe, and
+  White}]{hornik1989multilayer}
+Kurt Hornik, Maxwell Stinchcombe, and Halbert White. 1989.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock \emph{Neural networks}, 2(5):359--366.
+
+\bibitem[{Japkowicz and Stephen(2002)}]{japkowicz2002class}
+Nathalie Japkowicz and Shaju Stephen. 2002.
+\newblock The class imbalance problem: A systematic study.
+\newblock \emph{Intelligent data analysis}, 6(5):429--449.
+
+\bibitem[{Karpathy(2016)}]{stanford2016}
+Andrej Karpathy. 2016.
+\newblock \href{https://cs231n.github.io/}{Convolutional neural networks for
+  visual recognition}.
+
+\bibitem[{Krawczyk(2016)}]{krawczyk2016learning}
+Bartosz Krawczyk. 2016.
+\newblock Learning from imbalanced data: open challenges and future directions.
+\newblock \emph{Progress in Artificial Intelligence}, 5(4):221--232.
+
+\bibitem[{Krizhevsky(2009)}]{krizhevsky_2009}
+Alex Krizhevsky. 2009.
+\newblock \href{https://www.cs.toronto.edu/~kriz/cifar.html}{Cifar-10 and
+  cifar-100 datasets}.
+
+\bibitem[{Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton}]{krizhevsky2012}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton. 2012.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  1097--1105.
+
+\bibitem[{Kurakin et~al.(2016)Kurakin, Goodfellow, and Bengio}]{goodfellow2016}
+Alexey Kurakin, Ian Goodfellow, and Samy Bengio. 2016.
+\newblock \href{http://arxiv.org/abs/1607.02533}{Adversarial examples in the
+  physical world}.
+\newblock Technical report, arXiv.
+
+\bibitem[{Lecun et~al.(1989)Lecun, Boser, Denker, Henderson, Howard, Hubbard,
+  and Jackel}]{lecunn89}
+Yann Lecun, B.~Boser, {J. S.} Denker, D.~Henderson, {R. E.} Howard, W.~Hubbard,
+  and L.D. Jackel. 1989.
+\newblock Backpropagation applied to handwritten zip code recognition.
+\newblock \emph{Neural computation}, 1(4):541--551.
+
+\bibitem[{LeCun and Cortes(1998)}]{lecun1998mnist}
+Yann LeCun and Corinna Cortes. 1998.
+\newblock The mnist database of handwritten digits.
+
+\bibitem[{Matsugu et~al.(2003)Matsugu, Mori, Mitari, and
+  Kaneda}]{matsugu2003subject}
+Masakazu Matsugu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda. 2003.
+\newblock Subject independent facial expression recognition with robust face
+  detection using a convolutional neural network.
+\newblock \emph{Neural Networks}, 16(5):555--559.
+
+\bibitem[{Murphey(2004)}]{murphey2004}
+Guo~Hong Murphey, YI~L. 2004.
+\newblock Neural learning from unbalanced data.
+
+\bibitem[{Nguyen et~al.(2015)Nguyen, Yosinski, and Clune}]{nguyen2015}
+Anh Nguyen, Jason Yosinski, and Jeff Clune. 2015.
+\newblock Deep neural networks are easily fooled: High confidence predictions
+  for unrecognizable images.
+\newblock In \emph{2015 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 427--436. IEEE.
+
+\bibitem[{Nielsen(2016)}]{nielsen2016}
+Michael Nielsen. 2016.
+\newblock \href{http://www.neuralnetworksanddeeplearning.com}{Neural networks
+  and deep learning}.
+
+\bibitem[{Papernot(2016)}]{papernot_thesis_2016}
+Nicolas Papernot. 2016.
+\newblock On the integrity of deep learning systems in adversarial settings.
+
+\bibitem[{Papernot(2017)}]{papernot_2017}
+Nicolas Papernot. 2017.
+\newblock
+  \href{https://www.papernot.fr/files/16-mcdaniel-sp-machine-learning-in-adversarial-settings.pdf}{Machine
+  learning in adversarial settings}.
+
+\bibitem[{Papernot et~al.(2016{\natexlab{a}})Papernot, McDaniel, and
+  Goodfellow}]{papernot2016transf}
+Nicolas Papernot, Patrick McDaniel, and Ian Goodfellow. 2016{\natexlab{a}}.
+\newblock Transferability in machine learning: from phenomena to black-box
+  attacks using adversarial samples.
+\newblock \emph{arXiv preprint arXiv:1605.07277}.
+
+\bibitem[{Papernot et~al.(2016{\natexlab{b}})Papernot, McDaniel, Goodfellow,
+  Jha, Berkay~Celik, and Swami}]{papernot2016}
+Nicolas Papernot, Patrick McDaniel, Ian Goodfellow, Somesh Jha, Z~Berkay~Celik,
+  and Ananthram Swami. 2016{\natexlab{b}}.
+\newblock Practical black-box attacks against deep learning systems using
+  adversarial examples.
+\newblock \emph{arXiv preprint arXiv:1602.02697}.
+
+\bibitem[{Quionero-Candela et~al.(2009)Quionero-Candela, Sugiyama,
+  Schwaighofer, and Lawrence}]{Quionero}
+Joaquin Quionero-Candela, Masashi Sugiyama, Anton Schwaighofer, and Neil~D.
+  Lawrence. 2009.
+\newblock \emph{Dataset Shift in Machine Learning}.
+\newblock The MIT Press.
+
+\bibitem[{Simonyan and Zisserman(2014)}]{simonyan2014very}
+Karen Simonyan and Andrew Zisserman. 2014.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock \emph{arXiv preprint arXiv:1409.1556}.
+
+\bibitem[{Szegedy et~al.(2013)Szegedy, Zaremba, Sutskever, Bruna, Erhan,
+  Goodfellow, and Fergus}]{szegedy2013}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus. 2013.
+\newblock Intriguing properties of neural networks.
+\newblock \emph{arXiv preprint arXiv:1312.6199}.
+
+\bibitem[{Yosinski et~al.(2014)Yosinski, Clune, Bengio, and
+  Lipson}]{yosinski2014transferable}
+Jason Yosinski, Jeff Clune, Yoshua Bengio, and Hod Lipson. 2014.
+\newblock How transferable are features in deep neural networks?
+\newblock In \emph{Advances in neural information processing systems}, pages
+  3320--3328.
+
+\bibitem[{Zeiler and Fergus(2014)}]{zeiler2014visualizing}
+Matthew~D Zeiler and Rob Fergus. 2014.
+\newblock Visualizing and understanding convolutional networks.
+\newblock In \emph{European conference on computer vision}, pages 818--833.
+  Springer.
+
+\end{thebibliography}
