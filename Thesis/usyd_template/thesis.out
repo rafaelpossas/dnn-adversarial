@@ -24,10 +24,10 @@
 \BOOKMARK [1][-]{section.4.1}{4.1. Transferability}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.2}{4.2. Intra-technique transferability}{chapter.4}% 25
 \BOOKMARK [1][-]{section.4.3}{4.3. Cross-technique transferability}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.4}{4.4. Black-box Attacks}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.5}{4.5. Unrecognizable Images}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.6}{4.6. Adversarials in the Physical World}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.7}{4.7. Defending Against Adversarial Attacks}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{4.4. Black-box attacks}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.5}{4.5. Unrecognizable images}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.6}{4.6. Adversaries in the physical world}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.7}{4.7. Defending against adversarial attacks}{chapter.4}% 30
 \BOOKMARK [0][-]{chapter.5}{Chapter 5. Experiment design}{}% 31
 \BOOKMARK [1][-]{section.5.1}{5.1. Data domain}{chapter.5}% 32
 \BOOKMARK [1][-]{section.5.2}{5.2. The VGG architecture}{chapter.5}% 33
@@ -39,5 +39,5 @@
 \BOOKMARK [1][-]{section.6.2}{6.2. Under-sampling and over-sampling models}{chapter.6}% 39
 \BOOKMARK [1][-]{section.6.3}{6.3. Transfer learning}{chapter.6}% 40
 \BOOKMARK [1][-]{section.6.4}{6.4. Overlapping distributions}{chapter.6}% 41
-\BOOKMARK [0][-]{chapter.7}{Chapter 7. Conclusions and Future work}{}% 42
+\BOOKMARK [0][-]{chapter.7}{Chapter 7. Conclusion and future work}{}% 42
 \BOOKMARK [0][-]{chapter*.8}{Bibliography}{}% 43

@@ -24,10 +24,10 @@
 \contentsline {section}{\tocsection {}{4.1}{Transferability}}{19}{section.4.1}
 \contentsline {section}{\tocsection {}{4.2}{Intra-technique transferability}}{20}{section.4.2}
 \contentsline {section}{\tocsection {}{4.3}{Cross-technique transferability}}{20}{section.4.3}
-\contentsline {section}{\tocsection {}{4.4}{Black-box Attacks}}{21}{section.4.4}
-\contentsline {section}{\tocsection {}{4.5}{Unrecognizable Images}}{22}{section.4.5}
-\contentsline {section}{\tocsection {}{4.6}{Adversarials in the Physical World}}{22}{section.4.6}
-\contentsline {section}{\tocsection {}{4.7}{Defending Against Adversarial Attacks}}{24}{section.4.7}
+\contentsline {section}{\tocsection {}{4.4}{Black-box attacks}}{21}{section.4.4}
+\contentsline {section}{\tocsection {}{4.5}{Unrecognizable images}}{22}{section.4.5}
+\contentsline {section}{\tocsection {}{4.6}{Adversaries in the physical world}}{22}{section.4.6}
+\contentsline {section}{\tocsection {}{4.7}{Defending against adversarial attacks}}{24}{section.4.7}
 \contentsline {chapter}{\tocchapter {Chapter}{5}{Experiment design}}{25}{chapter.5}
 \contentsline {section}{\tocsection {}{5.1}{Data domain}}{25}{section.5.1}
 \contentsline {section}{\tocsection {}{5.2}{The VGG architecture}}{25}{section.5.2}
@@ -37,7 +37,7 @@
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Results}}{33}{chapter.6}
 \contentsline {section}{\tocsection {}{6.1}{Baseline model}}{33}{section.6.1}
 \contentsline {section}{\tocsection {}{6.2}{Under-sampling and over-sampling models}}{34}{section.6.2}
-\contentsline {section}{\tocsection {}{6.3}{Transfer learning}}{36}{section.6.3}
+\contentsline {section}{\tocsection {}{6.3}{Transfer learning}}{35}{section.6.3}
 \contentsline {section}{\tocsection {}{6.4}{Overlapping distributions}}{37}{section.6.4}
-\contentsline {chapter}{\tocchapter {Chapter}{7}{Conclusions and Future work}}{39}{chapter.7}
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Conclusion and future work}}{39}{chapter.7}
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{41}{chapter*.8}
