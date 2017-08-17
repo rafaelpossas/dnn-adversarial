@@ -91,14 +91,7 @@ Section 2 of this paper discusses the related work in both CNNs, gradient sign m
 \section{Related work}
 
 
-Previous work has shown that the high-dimensional non-linearities of convolutional neural networks \cite{lawrence1997face} creates adversarial pockets of space - places where data points could be moved in order to provide a wrong model output. As shown on Figure~\ref{fig:adv_space}, such pockets enables methods to deliberately create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion \cite{papernot_thesis_2016}. This is achieved by adding intentional noise to each pixel of an image so as to fool the algorithm into predicting an incorrect label \cite{goodfellow2014,papernot2016transf,szegedy2013}.
-
-\begin{figure}
-	\centering
-	\includegraphics[height=3.5cm]{adv_space.png}
-	\caption{Adversarial exploration of pockets of spaces \cite{papernot_2017}}
-	\label{fig:adv_space}
-\end{figure}
+Previous work has shown that the high-dimensional non-linearities of convolutional neural networks \cite{lawrence1997face} creates adversarial pockets of space - places where data points can be placed in order to provide a wrong model output. By exploiting such characteristics, recent methods were able to deliberately create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion \cite{papernot_thesis_2016}. This is achieved by adding intentional noise to each pixel of an image so as to fool the algorithm into predicting an incorrect label \cite{goodfellow2014,papernot2016transf,szegedy2013}.
 
 The gradient sign method was introduced by Goodfellow et al. (2014) and has been used as the foundation of many of the experiments in adversarial attacks on CNNs. The results have shown that convolutional neural networks have linear behavior in very high dimensional spaces \cite{goodfellow2014}.  Most inputs were miss-classified not only by Goodfellow et. al (2014) experiments but by others as well \cite{billovits,papernot2016}.
 
@@ -112,8 +105,14 @@ Our experiments aims to investigate the relationships of the underlying learning
 
 We use the CIFAR-10 data set \cite{krizhevsky_2009} in our experiment. CIFAR-10 data is visually rich and empowers the analysis between different class labels. The data set contains 32x32 images in 10 classes, each has 5,000 samples for training and 1,000 for testing. There is not much overlap nor hierarchical relationship between classes. Most CNNs experiments nowadays use the 2014 ImageNet dataset \cite{deng2009imagenet}. However, its hierarchically organized categories adds unnecessary complexity to the experiment design and hinders the analysis of the results (e.g. causality relationships).
 \subsection{Network architecture and synthetic dataset imbalance}
+\begin{figure}
+	\centering
+	\includegraphics[height=2.0cm]{net_diagram.png}
+	\caption{Adapted VGG Architecture}
+	\label{fig:vgg_arch}
+\end{figure}
 
-\subsubsection{Network Architecture} All the experiments were performed using a modified VGGNet architecture \cite{simonyan2014very}. The two fully connected 4096 layers at the end were replaced by one single layer with 512 neurons and RELU activations. In addition, the total number of convolutions blocks and pooling layers were reduced to 3, with the first layer having 2 stacked convolution layers followed by a max pooling of stride 2x2 and the last two layers with 3 stacked convolutions also followed by a max pooling of stride 2x2. We have used RMSProp  \cite{bengiormsprop} as the optimisation technique with a learning rate of $10^{-4}$ and a decay $10^{-5}$. Figure~\ref{fig:conf_matrix_full} shows that our model has an overall accuracy of approximately 83\%, which is comparable to many state of the art models nowadays.
+\subsubsection{Network Architecture} All the experiments were performed using a modified VGGNet \cite{simonyan2014very} architecture as shown on figure \ref{fig:vgg_arch}. The two fully connected 4096 layers at the end were replaced by one single layer with 512 neurons and RELU activations. In addition, the total number of convolutions blocks and pooling layers were reduced to 3, with the first layer having 2 stacked convolution layers followed by a max pooling of stride 2x2 and the last two layers with 3 stacked convolutions also followed by a max pooling of stride 2x2. We have used RMSProp  \cite{bengiormsprop} as the optimisation technique with a learning rate of $10^{-4}$ and a decay $10^{-5}$. Figure~\ref{fig:conf_matrix_full} shows that our model has an overall accuracy of approximately 83\%, which is comparable to many state of the art models nowadays.
 
 \begin{figure}
 	\centering
