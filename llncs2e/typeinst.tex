@@ -33,8 +33,8 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Effectiveness of adversarial attacks on class-imbalanced convolutional neural networks}
-\titlerunning{Imbalanced learning and adversarial inputs}
+\title{Effectiveness of Adversarial Attacks on Class-Imbalanced Convolutional Neural Networks}
+\titlerunning{Effectiveness of Adversarial Attacks on Class-Imbalanced CNNs}
 % a short form should be given in case it is too long for the running head
 
 % the name(s) of the author(s) follow(s) next
@@ -45,7 +45,7 @@
 %
 \author{Rafael Possas, Ying Zhou}
 %
-\authorrunning{Imbalanced learning and adversarial inputs}
+\authorrunning{Rafael Possas, Ying Zhou}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
@@ -61,8 +61,6 @@
 % "llncs.dem" accompanies the document class "llncs.cls".
 %
 
-\toctitle{Lecture Notes in Computer Science}
-\tocauthor{Authors' Instructions}
 \maketitle
 
 
@@ -88,7 +86,7 @@ Currently, there is no empirical evidence on the effectiveness of adversarial at
 \end{enumerate}
 
 Section 2 of this paper discusses the related work in both CNNs, gradient sign methods, adversarial attacks and imbalanced/transfer learning. Section 3 provides details of the training models, imbalanced datasets and gradient sign methods used in our experiments. Section 4 presents the results on the under-sampled, over-sampled and balanced cases using both black/white-box attacks. Sections 5 is dedicated to drawing conclusions and providing directions to related future work.
-\section{Related work}
+\section{Related Work}
 
 
 Previous work has shown that the high-dimensional non-linearities of convolutional neural networks \cite{lawrence1997face} creates adversarial pockets of space - places where data points can be placed in order to provide a wrong model output. By exploiting such characteristics, recent methods were able to deliberately create an adversary that produces an incorrect, high confidence prediction for an image without visible distortion \cite{papernot_thesis_2016}. This is achieved by adding intentional noise to each pixel of an image so as to fool the algorithm into predicting an incorrect label \cite{goodfellow2014,papernot2016transf,szegedy2013}.
@@ -99,7 +97,7 @@ The work of Papernot et al. (2016) has shown that one can use transfer learning 
 
 Techniques to overcome imbalanced learning have been developed for more general machine learning models. The work of Heibo et al \cite{he2008adasyn}, for instance, provides a technique for doing weighted sampling of minority classes to minimize the effect of imbalanced learning. Another approach could be to incorporate unsupervised clustering on synthetic data generation mechanism in order to avoid wrong generation of synthetic samples \cite{Barua2011}. More recent work has used a Bayesian framework to increase $l_2$ robustness to adversarial examples \cite{billovits}.
 
-\section{Experiment design}
+\section{Experiment Design}
 
 Our experiments aims to investigate the relationships of the underlying learning structure of CNNs and the perturbation caused by gradient sign methods. In particular we focus on the investigation of how the gradient step from the sign method moves the points away from their distributions, and how this could be affected by both balanced and imbalanced training sets. This requires  class labels of the data set to be non-hierarchical so we can make better assumptions of their distributions. 
 
@@ -222,7 +220,7 @@ The increased number of samples of the over-sampled label causes the model to pe
 	\caption{Under-sample on cat and truck increases misclassification to similar classes, while dog and automobile does not.}
 	\label{fig:overlap}
 \end{figure}
-\section{Conclusion and future work}
+\section{Conclusion and Future Work}
 
 We have shown that adversarial attacks are even more severe on datasets with under-sampled class labels and that the decision boundary trade-off on the over-sampled classes increases their robustness to such attacks. Labels with similar features have only shown higher vulnerability to the fast gradient sign methods in one of the classes of the pair. This specific result shows that similar classes might have degrees of similarities on which could be more or less exploited by the gradient method.  
 
